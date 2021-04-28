@@ -59,11 +59,4 @@
 \contentsline {section}{\numberline {9.1}Lo sviluppo di Taylor}{55}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Esempio facile}{56}{section.9.2}%
 \contentsline {section}{\numberline {9.3}Esempio piu' complicato}{57}{section.9.3}%
-\contentsline {chapter}{\numberline {10}Utilit\'a varie}{59}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Binomi di Newton}{59}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Gli esponenti}{60}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Il fattoriale}{61}{section.10.3}%
-\contentsline {section}{\numberline {10.4}I numeri di Fibonacci}{61}{section.10.4}%
-\contentsline {section}{\numberline {10.5}I grafici cartesiani}{61}{section.10.5}%
-\contentsline {section}{\numberline {10.6}La ricorsione}{63}{section.10.6}%
-\contentsline {chapter}{\numberline {11}Numeri Primi}{65}{chapter.11}%
+\contentsline {section}{\numberline {9.4}Conclusione}{58}{section.9.4}%

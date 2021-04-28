@@ -8,6 +8,10 @@ Piu' info nel mio blog: http://www-prod.palladius.it/joomla/index.php?option=com
 * Video su youtube
 * sposta su github per comodita
 
+## Bugs
+
+* move \em to \emph I got a lot of cursive by mistake:  https://tex.stackexchange.com/questions/25911/what-is-the-difference-between-em-and-emph/25918
+
 ## Software
 
 Sul Mac ho installato con `brew`:

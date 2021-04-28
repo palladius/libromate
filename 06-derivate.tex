@@ -34,7 +34,7 @@ corretta da dire \'e che $f$ ha come dominio $12$ punti ($= \{1,2,3,\cdot,12\}$)
 che la funzione \'e definita per tutti i giorni dell'anno, o addirittura per tutti i minuti dell'anno (basta vedere l'andamento di borsa dei
 vostri soldi minuto per minuto), ma di tutti questi valori son noti solo i dodici valori mensili. In generale, qualunque sia $f$, pensiamo
 che $f$ passi per dodici punti noti: $(1;10),(2;11),(3;10),\cdots,(12,11)$. Ai matematici questa definizione puntiforme di solito piace poco.
-Esistono infinite funzioni passanti per quesi dodici punti, ma una delle pi\'u semplici \'e sicuramente (senza usare i $sinc$, per chi li
+Esistono infinite funzioni passanti per questi dodici punti, ma una delle pi\'u semplici \'e sicuramente (senza usare i $sinc$, per chi li
 conosce) il polinomio di grado $12$ che passi per quei punti, che chiameremo $P(x)$.
 
 Ora vediamo di rispondere a qualche domanda: qual \'e stato l'andamento del nostro titolo su base annua? Qual \'e stato l'andamento del
@@ -53,7 +53,7 @@ siamo in un mondo diverso da quello reale.
 
 Poniamoci un paio di domande, e per ciascuna di esse chiediamoci di che strumenti abbiamo bisogno per rispondere. 
 
-{\em (1) Quanti soldi avremo tra un minuto? (2) Tra quanto tempo avremo 1000 soldi (una specie del nostro 'primo miliardo')? (3) Tra quanto
+{\emph (1) Quanti soldi avremo tra un minuto? (2) Tra quanto tempo avremo 1000 soldi (una specie del nostro 'primo miliardo')? (3) Tra quanto
 tempo raddoppieremo i nostri soldi? (4) Quant'\'e l'andamento del mio conto nei primi dieci minuti? (5) Ma \'e conveniente investire in questa banca?
 Se s\'i, quando lo \'e e quando no?}
 
@@ -67,7 +67,7 @@ $1000=2t_o^2+3t+10 \longrightarrow t_0=\frac{-3 \pm \sqrt{3^2-4 \cdot 2 \cdot (-
 entrambe sensate, prenderei quella positiva dato che per tempi minori di zero abbiamo l'imbarazzo di avere un conto
 altissimo in banca senza ancora aver depositato nulla: prodigi della matematica! Queste cose capitano spesso quando
 crcate di modellare la realt\'a con dei numeri; i numeri vi aiutano in tanti casi, ma spesso sono 'stupidi' e non
-danno per scontato quello che {\em voi} date per scontato. Io vi ho avvisati...
+danno per scontato quello che {\emph voi} date per scontato. Io vi ho avvisati...
 
 (3) Questa domanda \'e una tipica domanda in cui buttate i dati in ua equazione e sperate che venga fuori qualcosa
 di sensato. Ci chiediamo il tempo $t_1$ in cui i nostri $10$ son diventati $20$, ovvero il tempo in cui semplicemente
@@ -90,7 +90,7 @@ Non c'interessa calcolarla, solo capire che c'\'e e che significato ha...
   con la definizione.
 
 \begin{definizione}[Derivata]
-Sia data una funzione $f(x)$ continua sull'intervallo $[a;b]$. Sia $x_0$ un punto {\em interno} a tale intervallo ($x_0 \in ]a;b[$). Definiamo la derivata di $f$ nel punto $x_0$ come il valore:
+Sia data una funzione $f(x)$ continua sull'intervallo $[a;b]$. Sia $x_0$ un punto {\emph interno} a tale intervallo ($x_0 \in ]a;b[$). Definiamo la derivata di $f$ nel punto $x_0$ come il valore:
  \begin{equation}
   \lim_{x \rightarrow x_0} \andazzo[f;x_0;x] \doteq f'(x_0)
  \end{equation}
@@ -99,10 +99,10 @@ Sia data una funzione $f(x)$ continua sull'intervallo $[a;b]$. Sia $x_0$ un punt
   \lim_{x \rightarrow x_0} \frac{f(x)-f(x_0)}{x-x_0} \doteq f'(x_0)
  \end{equation}
  Notiamo intanto che la derivata non sembra essere una funzione, ma un semplice numero. Tranquilli, non vi ho ingannato.
- In realt\'a, per ogni $x_0$ su cui \'e definita $f$ \'e definita anche $f'$: potremmo definire la {\em funzione} derivata
+ In realt\'a, per ogni $x_0$ su cui \'e definita $f$ \'e definita anche $f'$: potremmo definire la {\emph funzione} derivata
  come la funzione che segue, punto per punto, i valori dati dalla definizione. Attenzione, per\'o! La derivata non \'e necessariamente
  calcolabile su ogni punto su cui \'e definita $f$: su ogni punto deve esserci abbastanza spazio sia a sinistra che a destra
- affinch\'e il limite possa essere calcolato\footnote{Questo ha a che fare con i cosiddetti {\em punti di accumulazione}, di
+ affinch\'e il limite possa essere calcolato\footnote{Questo ha a che fare con i cosiddetti {\emph punti di accumulazione}, di
  cui non  parler\'o. In generale, \'e sufficiente che esista un insieme $[a,b]$ compatto che racchiuda il punto $x_0$ affinch\'e
  il limite sia calcolabile.}. Un modo spesso pi\'u facile per definire la derivata \'e quella di non dire: "limite per $x$ che
  tende a $x_0$" ma di dire: "limite per $x=x_0+h$ con $h$ che tende a $0$". Se ci pensate non cambia assolutamente nulla, ma i
@@ -111,7 +111,7 @@ Sia data una funzione $f(x)$ continua sull'intervallo $[a;b]$. Sia $x_0$ un punt
   \lim_{h \rightarrow 0} \frac{f(x+h)-f(x)}{h} \doteq f'(x)
  \end{equation}
  Il significato fisico pi\'u semplice (e che non dovrete mai dimenticare) della derivata \'e: $f'(x_0)$ \'e sempre il valore
- della {\em pendenza } della retta tangente a $f$ nel punto $x_0$.
+ della {\emph pendenza } della retta tangente a $f$ nel punto $x_0$.
 \end{definizione}
 
 La derivata \'e, per nostra fortuna, sempre facile da calcolare (ci\'o non vale, ad esempio per gli integrali). Per ogni funzione 'notevole',
