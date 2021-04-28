@@ -11,15 +11,45 @@
 %  \textup{Giulio Cesare Barozzi}, Lezioni di Analisi III
 %}
 
-
 In questo capitolo si parler\'a della teoria dei numeri (nella quale son sempre stato poco ferrato): vi dir\'o lo stretto necessario per capire i numeri naturali,
 reali, complessi senza la pretesa di dare rigorose specifiche formali degli stessi.
 
 I numeri fondamentali che servono nella matematica sono naturali, interi, razionali, reali e complessi. Cercher\'o di darne una rudimentale definizione,
 di fare qualche esempio, e di vederne alcune propriet\'a.
 
+\section{Insiemi notevoli, in breve}
+
+Cominciamo con una carrellata degl'insiemi notevoli (gruppi di numeri con cui ci piace giocare) ed alcune loro proprieta', particolarmente il loro comportamento all'infinito:
+
+* $\mathbb{N}$: Questo e' l'insieme dei \textbf{Naturali}, ovvero {0,1,2,3, .. 42, 100, 1000, 1000000, ... , e tanti altri }. Quelli che in
+  italiano chiamiamo numeri interi in matematica si chiamano numeri naturali.
+
+* $\mathbb{Z}$: L'insieme degl'\textbf{Interi} e' simile al precedente ma include anche i numeri negativi. 
+ E' grande esattamente il doppio di $\mathbb{N}$, eppure e' grande uguale ad $\mathbb{N}$ \footnote{Eh gia', strana cosa gli infiniti. Si puo' dimostrare che la cardinalita' di N e Z sono uguali, e le sorprese non sono finite.. }.
+ I numeri che contiene sono $0,1,-1,42,-42,1000,-1000$, e cosi' via.
+
+* $\mathbb{Q}$: Questo e' l'insieme dei \textbf{Razionali}, ovvero l'insieme dei numeri frazionari espriminbili come $\frac{p}{q}$.
+Alcuni esempi sono: $1,2/5,3/4,-42$ . Da notare che i razionali contengono gli interi ma contengono moltissimi piu' numeri.
+E' un insieme molto denso nel senso
+che tra i suoi 2 valori $1/10$ e $2/10$ ci sono infiniti valori. La cosa forse piu' incredibile e' che (Peano lo dimostro' per primo)
+la cardinalita' di $\mathbb{Q}$ e la stessa di $\mathbb{N}$. Lo so, assurdo. Eppur vero. L'infinita' di questi interi e infiniti ad essa
+isomorfi e' di difficile comprensione, ve lo concedo.
+
+* $\mathbb{R}$: insieme dei \textbf{reali}. Chiameremo $\mathbb{R}+$ l'insieme dei reali >= 0 e con $\mathbb{R}-$ i reali con x<=0, e con $\mathbb{R}*$ l'insieme dei reali $senza lo \{0\}$.
+
+* $C$: insieme dei \textbf{complessi}. I complessi meritano un capitolo a parte. L'insieme \egrave isomorfo a $R^2$ (ovveri tutti i punti in un piano).
+
+* $\mathbb{R}^3$: insieme di terne di reali. In matematica non esiste ma in fisica si usa un casino per definire la posizione di un punto nello spazio
+e ci tenevo a contestualizzarlo qui.
+
+* $\mathbb{Z}_p$: insieme di di interi modulo $p$. Questo insieme si dice anello, e gode di interessantissime proprieta' ma e' difficile parlarne se non decidiamo $p$. 
+  Se $p$ e' un numero primo, gode di ulteriori proprieta' ad esempio la possibilita' di inversione per la moltiplicazione. Esempio: $\mathbb{Z}_5 := {1,2,3,4,5}$ o ancora
+  meglio $\mathbb{Z}_5 := {0, 1,2,3,4}$. Si', la cosa incredibible di questo insieme e' che 0 e 5 sono la stessa cosa, quindi intercambiabili. Un professore bastardo
+  potrebbe addirittura dirvi che $\mathbb{Z}_5 := {420, -4, 427, -42, 420004}$. Se dividete un numero per 5 e guardate al resto, 1 e 6 e 66 sono la stessa cosa, no? 
+  Per maggiori informazioni: \href{https://it.wikipedia.org/wiki/Aritmetica_modulare}{Aritmetica modulare su Wikipedia}.
 
 \section{I numeri naturali}
+
 Tutto nasce dai naturali. Schiere di filosofi e matematici hanno provato a darne una definizione. Peano e Russell (se ben ricordo) ne hanno dato una definizione operativa che vi propongo.
 
 - Esiste un numero iniziale che chiameremo $zero$ ($0$).

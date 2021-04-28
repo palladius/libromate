@@ -1,5 +1,5 @@
 \label{notazione}
-\chapter{Notazione}
+\chapter{Notazione e definizioni}
 
 In questo capitoletto tratteremo il difficile problema di capirci: non solo quando si parla italiano (il che e' lasciato
 alla mia capacita' di scriverlo e a quella delle vostre maestre delle elementarii), ma anche quando si parla matematichese
@@ -7,43 +7,28 @@ alla mia capacita' di scriverlo e a quella delle vostre maestre delle elementari
 matematici parlano matematichese (80\% circa) e in parte come {\em io} parlo matematichese (il rimanente 20\%).
 Tenetelo in considerazione almeno ogni tanto; ora come ora, vi do il permesso di saltarlo, poiche' e' certamente il piu' noioso.
 
-\section{Insiemi famosi}
-
-Insiemi notevoli:
-
-* $\mathbb{N}$: Questo e' l'insieme dei \textbf{Naturali}, ovvero {0,1,2,3, .. 42, 100, 1000, 1000000, ... , e tanti altri }. Quelli che in
-  italiano chiamiamo numeri interi in matematica si chiamano numeri naturali.
-
-* $\mathbb{Z}$: L'insieme degl'\textbf{Interi} e' simile al precedente ma include anche i numeri negativi. 
- E' grande esattamente il doppio di $\mathbb{N}$, eppure e' grande uguale ad $\mathbb{N}$ \footnote{Eh gia', strana cosa gli infiniti. Si puo' dimostrare che la cardinalita' di N e Z sono uguali, e le sorprese non sono finite.. }.
- I numeri che contiene sono $0,1,-1,42,-42,1000,-1000$, e cosi' via.
-
-* $\mathbb{Q}$: Questo e' l'insieme dei \textbf{Razionali}, ovvero l'insieme dei numeri frazionari espriminbili come $\frac{p}{q}$.
-Alcuni esempi sono: $1,2/5,3/4,-42$ . Da notare che i razionali contengono gli interi ma contengono moltissimi piu' numeri.
-E' un insieme molto denso nel senso
-che tra i suoi 2 valori $1/10$ e $2/10$ ci sono infiniti valori. La cosa forse piu' incredibile e' che (Peano lo dimostro' per primo)
-la cardinalita' di $\mathbb{Q}$ e la stessa di $\mathbb{N}$. Lo so, assurdo. Eppur vero. L'infinita' di questi interi e infiniti ad essa
-isomorfi e' di difficile comprensione, ve lo concedo.
-
-* $\mathbb{R}$: insieme dei \textbf{reali}. Chiameremo $\mathbb{R}+$ l'insieme dei reali >= 0 e con $\mathbb{R}-$ i reali con x<=0, e con $\mathbb{R}*$ l'insieme dei reali $senza lo \{0\}$.
-
-* $C$: insieme dei \textbf{complessi}. I complessi meritano un capitolo a parte. L'insieme \egrave isomorfo a $R^2$ (ovveri tutti i punti in un piano).
-
-* $\mathbb{R}^3$: insieme di terne di reali. In matematica non esiste ma in fisica si usa un casino per definire la posizione di un punto nello spazio
-e ci tenevo a contestualizzarlo qui.
-
 \subsection{simboli}
 
 \begin{enumerate}
-  \item{$\doteq$} Simbolo di definizione; il $90\%$ delle volte si intende: definisco ci\'o che sta a {\em sinistra} con ci\'o che sta a {\em destra}. Ad esempio: $ x \item{$\doteq$} 2$ vuol dire: definiamo X come il numero 2 (facile),
-  mentre con $ f(x) \item{$\doteq$} x$ intendiamo: definiamo come $f$ la funzione che e' uguale a $x$ per ogni $x$, ovvero la funzione identita' (molto piu' coomplesso). Nel primo caso associamo a un acino d'uva il valore 2, nel secondo
-  associamo a un grappolo d'uva tanti valori diversi che dipendono da che acino sia. 
+  \item{\b{$\doteq$}} Simbolo di definizione; il $90\%$ delle volte si intende: definisco ci\'o che sta a {\em sinistra} con ci\'o che sta a {\em destra}. Ad esempio: $ x \doteq 2$ vuol dire: definiamo X come il numero 2 (facile),
+  mentre con $ f(x) \doteq x$ intendiamo: definiamo come $f$ la funzione che e' uguale a $x$ per ogni $x$, ovvero la funzione identita' (molto piu' coomplesso). Nel primo caso associamo a un acino d'uva il valore 2, nel secondo
+  associamo a un grappolo d'uva tanti valori diversi che dipendono da che acino sia. Una nota estetica: non amo questo simbolo perche' non c'e' nulla dentro ad esso che 
+  privilegi la sinistra sulla destra, per cui preferico questo simbolo, ad esso equivalente: $:=$
   \item{$\equiv$} Simbolo di equivalenza; $a \equiv b$ vuole dire che $a$ \'e equivalente a $b$ (el $90\%$ delle volte si intende: definisco ci\'o che sta a {\em sinistra}
   con ci\'o che sta a {\em destra}). E' qualcosa di pi\'u forte dell'uguaglianza (so che fa strano, ma pensate a dire $f(x)=g(x)$ e a dire $f(x) \equiv g(x)$: nel primo caso
-  cerchiamo di vedere per quali $x$ $f$ e $g$ si ugagliano, nel secondo stiamo dicendo che le due funzioni sono perfettamente identiche).
+  cerchiamo di vedere per quali $x$ $f$ e $g$ si ugagliano, nel secondo stiamo dicendo che le due funzioni sono perfettamente identiche). Da notare che il segno di equivalenza 
+  tende ad aver senso solo per concetti complessi come funzioni e insiemi che a sinistra e a destra possano avere diversi valori. Per singoli valori come 3 e 4, equivalenza 
+  e uguaglianza sono equivalenti (pun intended), quindi e' inutile scomodare l'equivalenza dato che l'uguaglianza ha piu' anzianita'.
+  \item{positivo}. Una cosa che spesso confonde e' la definizione di numero positivo: chiameremo un numero positivo un numero come 0,1,2,42. Anche lo 0 e' positivo. Chiameremo 
+    un numero \em{strettamente positivo} un numero da 1 in su. Allo stesso modo chiameremo un numero negativo se va da 0 in giu', e strettamente negativo un numero strettamente minore di 0.
+    Da notare: 0 e' sia positivo che negativo, ma non e' ne' strettamente positivo ne' strettamente negativo. Il piu' piccolo numero positivo e' 0, ma il piu' piccolo 
+    numero strettamente positivo esiste solo per pochi insiemi (come i naturali, che e' 1); buona fortuna a dirmi il piu' piccolo reale maggiore di 0! Se lo 
+    trovate, io vi trovo il simbolo, lo chiamero' $0^+$ o $\varepsilon$, ma per favore, ditemi il suo valore esatto ;)
 \end{enumerate}
 
 \section{Come leggere una funzione}
+
+% TODO(ricc): forse questo lo puoi spostare al capitolo funzioni.
 
 \subsection{Una funzione facile: una retta}
 
@@ -118,7 +103,7 @@ Molto meglio! Ovvio che in questo caso i coefficienti a,b della retta sono ora b
 - Uhm, N? che significa N? Dieci? Di piu'? Beh cosi' a occhio se N fosse anche 100 verrebbe fuori qualcosa tipo:
 
 \begin{equation}
-  f(x)= a x^100 + b x^99 + ... + v x + z
+  f(x)= a x^{100} + b x^{99} + ... + v x + z
 \end{equation}
 
 Ora ho un problem amolto piccolo, le lettere sono solo 21 (26 se scomodiamo le anglosassoni), ma io ho 101 coefficienti qui,
@@ -129,7 +114,7 @@ assegnare $ a_0, a_{-1} $ alla bisogna, purche' siano iterabili (quindi della ca
 Bene, allora un modo piu' elegante di esprimere questa notazione e': 
 
 \begin{equation}
-  f(x)= a_100 x^100 + a_99 x^99 + ... + a_1 x + a_0
+  f(x)= a_{100} x^{100} + a_99 x^99 + ... + a_1 x + a_0
 \end{equation}
 
 Ora, se voleessimo fare i pignoli e togliere quei puntini di sospensione che fanno molto "il mio completo elegante e'

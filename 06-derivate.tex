@@ -116,13 +116,13 @@ esiste una funzione che di essa \'e la derivata. vediamo di ricavarne alcune; de
 \begin{esercizio}
 Calcolare la derivata di $x(t)=2t^2+3t+10$, che chiameremo $x'(t)$.
 \begin{eqnarray}[rcl]
- x'(t) & = & \lim_{t \longrightarrow h} \frac{f(t+h)-f(t)}{h} =\
-       & = & \lim \frac{(2(t+h)^2+3(t+h)+10)-(2t^2+3t+10)}{h} =\
-       & = & \lim \frac{2t^2+4ht+2h^2+3t+3h+10-2t^2-3t-10}{h}=\
-       & = & \lim \frac{4ht+2h^2+3h}{h}=\
-       & = & \lim \frac{(h)(3+4t+2h)}{h}=\
-       & = & \lim 3+4t+2h=\
-       & = & 3+4t.
+ x'(t) & = & \lim_{t \longrightarrow h} \frac{f(t+h)-f(t)}{h} = \\
+       & = & \lim \frac{(2(t+h)^2+3(t+h)+10)-(2t^2+3t+10)}{h} = \\
+       & = & \lim \frac{2t^2+4ht+2h^2+3t+3h+10-2t^2-3t-10}{h}= \\
+       & = & \lim \frac{4ht+2h^2+3h}{h}= \\
+       & = & \lim \frac{(h)(3+4t+2h)}{h}= \\
+       & = & \lim 3+4t+2h= \\
+       & = & 3+4t
 \end{eqnarray}
 Semplice, no? Notate che le parti che non contenevano $h$ si sono elise a vicenda (riflettete un attimo
 sul perch\'e), le parti che la contenevano di grado $1$ (ovvero $(3+4t)h$) sono rimaste fino alla fine,
@@ -151,13 +151,10 @@ Per risolvere questa, occorre conoscere i binomi di Newton. Per essi rimando a \
 \end{equation}
 Sapendo ci\'o, usiamo la definizione di derivata:
 \begin{eqnarray}
-D[x^n]  & = & \lim_{h \rightarrow 0}\frac{(x+h)^n-x^n}{h} = \
-	& = & \lim \frac{
-	(x^n+\binom{n}{1}x^{n-1}h+\binom{n}{2}x^{n-2}h^2+\cdots+h^n) - (x^n)
-	}{h} \
-	& = & \lim \frac{
-	(\binom{n}{1}x^{n-1}h+\binom{n}{2}x^{n-2}h^2+\cdots+h^n)}{h} \
-	& = & \binom{n}{1}x^{n-1}\
+D[x^n]  & = & \lim_{h \rightarrow 0}\frac{(x+h)^n-x^n}{h} = \\
+	& = & \lim \frac{(x^n+\binom{n}{1}x^{n-1}h+\binom{n}{2}x^{n-2}h^2+\cdots+h^n) - (x^n) }{h} \\
+	& = & \lim \frac{(\binom{n}{1}x^{n-1}h+\binom{n}{2}x^{n-2}h^2+\cdots+h^n)}{h} \\
+	& = & \binom{n}{1}x^{n-1} \\
 	& = & nx^{n-1}
 \end{eqnarray}
 Anche qui, i termini di ordine $h^2$ o superiori sono morti, lasciandoci qualcosa di pulitissimo! La cosa pi\'u bella di questo
@@ -174,37 +171,37 @@ buona 'cultura' supplementare ;)
 
 \begin{tabular}{|r|l|}
 \hline
-Funzione & Derivata\
+Funzione & Derivata\\
 \hline
 \hline
-$x^n$ & $nx^{n-1}$ \
-$ax^n+bx+c$ & $2ax+b^\dagger$ \
-$\frac{1}{x^n}$ & $\frac{-1}{x^{n+1}}^\dagger$ \
-$\sqrt{x}$ & $\frac{1}{2\sqrt{x}}^\dagger$ \
-$\sqrt[n]{x} (=x^{\frac{1}{n}})$ & $\frac{1}{n\sqrt[n]{x^{n-1}}}^\dagger$ \
+$x^n$ & $nx^{n-1}$ \\
+$ax^n+bx+c$ & $2ax+b^\dagger$ \\
+$\frac{1}{x^n}$ & $\frac{-1}{x^{n+1}}^\dagger$ \\
+$\sqrt{x}$ & $\frac{1}{2\sqrt{x}}^\dagger$ \\
+$\sqrt[n]{x} (=x^{\frac{1}{n}})$ & $\frac{1}{n\sqrt[n]{x^{n-1}}}^\dagger$ \\
 \hline
-$\log_a(x)$ & $\frac{\log_a(e)}{x}$ \
-$\ln(x)$ & $\frac{1}{x} ^\dagger$ \
-$\ln|x|$ & $\frac{1}{x} ^\dagger$ \
+$\log_a(x)$ & $\frac{\log_a(e)}{x}$ \\
+$\ln(x)$ & $\frac{1}{x} ^\dagger$ \\
+$\ln|x|$ & $\frac{1}{x} ^\dagger$ \\
 \hline
-$\sin(x)$ & $\cos(x)$ \
-$\cos(x)$ & $-\sin(x)$ \
-$\tan(x)$ & $\frac{1}{\cos^2(x)} (=1+\tan^2(x))$ \
+$\sin(x)$ & $\cos(x)$ \\
+$\cos(x)$ & $-\sin(x)$ \\
+$\tan(x)$ & $\frac{1}{\cos^2(x)} (=1+\tan^2(x))$ \\
 \hline
-$\arcsin(x)$ & $\frac{1}{\sqrt{1-x^2}}$ \
-$\arccos(x)$ & $\frac{-1}{\sqrt{1-x^2}}$ \
-$\arctan(x)$ & $\frac{1}{x^2+1}$ \
+$\arcsin(x)$ & $\frac{1}{\sqrt{1-x^2}}$ \\
+$\arccos(x)$ & $\frac{-1}{\sqrt{1-x^2}}$ \\
+$\arctan(x)$ & $\frac{1}{x^2+1}$ \\
 \hline
-$a^x$ & $a^x \ln a$ \
-$e^x$ & $e^{x \dagger}$\
+$a^x$ & $a^x \ln a$ \\
+$e^x$ & $e^{x \dagger}$\\
 \hline
-$\sinh(x)$ & $\cosh(x)^\dagger$ \
-$\cosh(x)$ & $-\sinh(x)^\dagger$ \
-$\tanh(x)$ & $\frac{1}{\cosh^2(x)}^\dagger$ \
+$\sinh(x)$ & $\cosh(x)^\dagger$ \\
+$\cosh(x)$ & $-\sinh(x)^\dagger$ \\
+$\tanh(x)$ & $\frac{1}{\cosh^2(x)}^\dagger$ \\
 \hline
-$arcsinh(x) (= ln|x + \sqrt{x^2+1}|)$ & $\frac{1}{\sqrt{1-x^2}} ^\dagger$ \
-$arccosh(x) (= ln|x \pm \sqrt{x^2-1}|)$ & $\frac{-1}{\sqrt{1-x^2}} ^\dagger$ \
-$arctanh(x) (= \frac{1}{2} ln|\frac{1+x}{1-x}|)$ & $\frac{1}{x^2-1} ^\dagger$ \
+$arcsinh(x) (= ln|x + \sqrt{x^2+1}|)$ & $\frac{1}{\sqrt{1-x^2}} ^\dagger$ \\
+$arccosh(x) (= ln|x \pm \sqrt{x^2-1}|)$ & $\frac{-1}{\sqrt{1-x^2}} ^\dagger$ \\
+$arctanh(x) (= \frac{1}{2} ln|\frac{1+x}{1-x}|)$ & $\frac{1}{x^2-1} ^\dagger$ \\
 \hline
 \end{tabular}
 
