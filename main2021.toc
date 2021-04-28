@@ -45,18 +45,19 @@
 \contentsline {section}{\numberline {6.5}Limiti: uso pratico}{41}{section.6.5}%
 \contentsline {chapter}{\numberline {7}Derivate}{43}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Cos' \`{e}una derivata}{43}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Derivate notevoli}{48}{section.7.2}%
+\contentsline {section}{\numberline {7.2}Derivate notevoli}{49}{section.7.2}%
 \contentsline {subsection}{\numberline {7.2.1}Propriet\'a delle derivate}{49}{subsection.7.2.1}%
 \contentsline {subsubsection}{Multilinearit\'a della derivata}{49}{section*.3}%
-\contentsline {subsubsection}{Derivata del prodotto}{49}{section*.4}%
-\contentsline {subsubsection}{Derivata del rapporto}{49}{section*.5}%
-\contentsline {subsubsection}{Derivata di funzione composta}{49}{section*.6}%
-\contentsline {subsubsection}{Derivata di funzione inversa}{50}{section*.7}%
-\contentsline {section}{\numberline {7.3}Massimi e minimi}{50}{section.7.3}%
+\contentsline {subsubsection}{Derivata del prodotto}{50}{section*.4}%
+\contentsline {subsubsection}{Derivata del rapporto}{50}{section*.5}%
+\contentsline {subsubsection}{Derivata di funzione composta}{50}{section*.6}%
+\contentsline {subsubsection}{Derivata di funzione inversa}{51}{section*.7}%
+\contentsline {section}{\numberline {7.3}Massimi e minimi}{51}{section.7.3}%
 \contentsline {chapter}{\numberline {8}Equazioni differenziali}{53}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Introduzione}{53}{section.8.1}%
 \contentsline {chapter}{\numberline {9}Serie di Taylor}{55}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Lo sviluppo di Taylor}{55}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Esempi}{56}{section.9.2}%
 \contentsline {chapter}{\numberline {10}Utilit\'a varie}{57}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Binomi di Newton}{57}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Gli esponenti}{58}{section.10.2}%
@@ -64,3 +65,4 @@
 \contentsline {section}{\numberline {10.4}I numeri di Fibonacci}{59}{section.10.4}%
 \contentsline {section}{\numberline {10.5}I grafici cartesiani}{59}{section.10.5}%
 \contentsline {section}{\numberline {10.6}La ricorsione}{61}{section.10.6}%
+\contentsline {chapter}{\numberline {11}Numeri Primi}{63}{chapter.11}%
