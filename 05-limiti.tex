@@ -1,0 +1,216 @@
+\label{limiti}
+\chapter{Limiti}
+
+Questo paragrafo spiega il difficile (almeno a mio parere) e anti-intuitivo concetto di {\em limite}. Esso è propedeutico al
+concetto di derivata ed integrale, per esempio, e consiglio di familiarizzare coi limiti prima di procedere con argomenti che li usano.
+
+\section{Limiti: un'introduzione}
+
+I limiti sono a mio parere uno dei più potenti e interessanti costrutti umani per l'analisi matematica; 
+con ciò voglio dire che grazie ad essi si va molto lontano, ma sono anche convinto che se degli extraterrestri 
+inventassero un loro sistema di matematica non potrebbero vivere senza interi, reali, derivate e funzioni questi potrebbero 
+però benissimo andare avanti senza la nostra definizione di limite. E' una mia impressione: trattatela come tale.
+
+Vediamo di iniziare con un esempio. Prendiamo la funzione:
+
+\begin{equation}
+ f(x)=\frac{x^2-4}{x-2} \hspace{20pt} \bigg( = \frac{(x+2)(x-2)}{x-2} \bigg)
+\end{equation}
+
+Attenti! Non barate! So che vi verrà la tentazione di dire che $f(x)=x+2$, ma a essere esatti la cosa non vale. Se facciamo
+un piccolo studio di funzione, ci persuadiamo subito che la funzione {\em non} è definita per $x=2$, mentre in ogni altro punto
+essa vale $f(x)=x+2$ (il che dimostra che non avete ancora completamente dato di matto). Questo capitolo serve a creare una base
+teorica per poter dire la seguente, rilassante frase: "La funzione $f$ non è definita in $2$, ma se la differenza tra $x$ e $2$ è
+piccola, $f$ si avvicina molto a $4$". Sembra banale ma, come diceva il mio professore di Analisi III, "Sono 50 anni che faccio
+matematica e nessuno mi ha mai spiegato cosa sia un numero piccolo". Anzitutto provare per credere (calcolatrice alla mano, se vi serve):
+
+\begin{equation}
+\begin{array}{rcl}
+ f(1.9) &=&3.9 \\
+ f(1.99) &=& 3.99 \\
+ f(1.9999) &=& 3.9999 \\
+ f(2) & = & ?!? \\
+ f(2.0001) &=& 4.0001 \\
+ f(2.01) &=& 4.01 
+\end{array}
+\end{equation}
+
+La tentazione che mi viene è di mettere un cerotto a $f$ e creare una funzione simile (chiamiamola $\stackrel{g}{f}$ o $f_{rep}$)
+che viene 'riparata' nel punto di discontinuità (nel nostro caso la $f_{rep}$ varrebbe proprio $x+2$, esattamente come vi sareste
+aspettati).
+
+
+\section{Limiti: definizione}
+
+Diremo che:
+
+\begin{equation}
+\lim_{x \to x_0} f(x) = y_{0}
+\end{equation}
+{\em (che si legge 'limite per $x$ che tende a $x_0$ di $f(x)$ è $y_0$')} se vale la seguente condizione:
+\begin{equation}\label{definizionelimite}
+\forall \epsilon >0 \exists \nu_\epsilon : \{ |x-x_0|<\nu_\epsilon \Longrightarrow  |f(x)-y_0|<\epsilon   \}
+\end{equation}
+
+Lo so, lo so, suona assolutamente incomprensibile; vediamo di capirlo; anzitutto chiamiamo $P_{incriminato} \doteq (x_0;y_0)$.
+Detto ciò, potete asserire che il limite di $f$ in $x_0$ è $y_0$ con assoluta certezza solo se, comunque un antipatico (che
+chiameremo Andrea poiché ne condivide l'iniziale) fissi una $\epsilon$ 'piccola a piacere', voi siete in grado di trovare una
+$\nu$ in funzione di $\epsilon$ tale che se la funzione dista in orizzantale da $P$ meno di quanto avete detto voi, essa dista
+pure in verticale meno di quel che vi ha detto Andrea. In altre parole, $\epsilon$ è il $\Delta Y$ massimo che Andrea accetterà,
+e $\nu_\epsilon$ è il $\Delta X$ massimo, dettato da voi, intorno al quale la funzione si comporterà così bene da non uscire dai
+limiti (che brutta parola!) imposti da Andrea.
+
+Notiamo anzitutto una cosa: la definizione di limite non aiuta a {\em scoprire} quanto un limite valga, bensì a {\em verificare}
+se esso tenda effettivamente a un certo valore. Ovvero: se un uccellino vi dice che $\lim_{x \to 5} f(x)=7$, potete verificare
+se l'uccellino abbia ragione o torto; ma questa definizione non vi aiuta assolutamente a capire quanto sia $\lim_{x \to 5} f(x)$:
+se $7$,$8$,$9$, o $-\pi$.
+
+Vediamo di usare questa definizione per verificare la funzione definita all'inizio del capitolo (\refpagref{equazionefratta}).
+Anzitutto concorederete con me che calcolare il limite in un punto diverso da $2$ sia possibile ma alquanto inutile: non serve
+la potenza dei limiti dato che la funzione fuori da $2$ è definita in modo semplice.
+
+\begin{equation}
+ \lim_{x \to 2} \frac{x^2-4}{x-2}=4
+\end{equation}
+Vediamo se è vero applicando la definizione:
+\begin{equazione}
+\forall \epsilon>0 \exists \nu_\epsilon : \{ |x-2|<\nu_\epsilon \Longrightarrow  |\frac{x^2-4}{x-2}-4|<\epsilon   \}\\
+|\frac{x^2-4-4(x-2)}{x-2}|<\epsilon \longrightarrow |\frac{x^2-4x+4}{x-2}|<\epsilon\\
+|\frac{x^2-4x+4}{x-2}|<\epsilon \longrightarrow |\frac{(x-2)^2}{x-2}|<\epsilon\\
+|x-2|<\epsilon
+\end{equazione}
+
+Ora che abbiamo semplificato, è il turno di Andrea a fissare un $\epsilon$ (errore massimo voluto): diciamo che lui dica $0.1$
+(un decimo). Non è gentile con noi, poteva dire $10$, ma dobbiamo abituarci a tali bassezze se vogliamo andare in giro orgogliosi
+a dire che il limite vale $4$! Ora noi dobbiamo trovare un $\nu_\epsilon$ che faccia valere la definizione. Ehi! Prendiamo la metà
+di quel che ha detto lui, $0.05$ (mezzo decimo): dobbiamo mostrare la parte tra parentesi graffe dell'eq. \ref{definizionelimite}:
+
+\begin{equation}
+|x-2|<\nu_\epsilon \Longrightarrow  |\frac{x^2-4}{x-2}-4|<\epsilon  \\
+|x-2|<0.05 \Longrightarrow  |\frac{x^2-4}{x-2}-4|=|x-2|<0.1 
+\end{equation}
+
+Bè, chiamando $|x-2|$ col nome 'Pippo', è dannatamente ovvio che se Pippo è minore di $0.05$, allora Pippo sarà anche minore
+di $0.1$! C'è però un problema: io vorrei andare a casa prima di sera, e invece con questa tecnica devo aspettare che Andrea
+si stanchi di sparare numeri sempre più piccoli! Lui potrebbe dire $0.01$, $0.0000001$, $\pi/10^{42}$, e io dovrei sempre andare
+avanti a dimostrare che so trovare un $\nu_\epsilon$ che freghi il suo $\epsilon$. Dobbiamo essere più furbi di così, dobbiamo
+inventarci una funzione (che con molta fantasia chiameremo $\nu(\epsilon)$ che ad ogni numero che ci dia Andrea associ un numero
+buono per fregarlo. Proviamo con $\nu(\epsilon) \doteq \frac{\epsilon}{2}$. Applichiamo la definizione:
+
+\begin{equazione}
+|x-2|<\nu(\epsilon) \Longrightarrow  |x-2|<\epsilon  \\
+|x-2|<\frac{\epsilon}{2} \Longrightarrow  |x-2|<\epsilon 
+\end{equazione}
+
+Direi che funziona: se Pippo è minore della metà di $\epsilon$, a maggior ragione è minore di $\epsilon$ (attenti, questo vale
+solo perché $\epsilon>0$!!! Non sottovalutate i cavilli). D'ora in poi, possiamo mettere una segreteria telefonica, e ogni volta
+che Andrea telefona gli risponderà: "Quello che hai detto diviso due!", e così potremo anche uscire di casa a farci una birra, ogni tanto. 
+
+Attenzione, questa volta l'uccellino ha suggerito giusto (che $f=4$), ma se ci avesse detto $5$?!? Proviamo, tanto per vedere.
+\begin{equazione}
+\forall \epsilon>0 \exists \nu_\epsilon : \{ |x-2|<\nu_\epsilon \Longrightarrow  |\frac{x^2-4}{x-2}-5|<\epsilon   \}\\
+|\frac{x^2-4-5(x-2)}{x-2}|<\epsilon \longrightarrow |\frac{x^2-4x+4}{x-2}|<\epsilon\\
+|\frac{x^2-5x+6}{x-2}|<\epsilon \longrightarrow |\frac{(x-2)(x-3)}{x-2}|<\epsilon\\
+|x-3|<\epsilon
+\end{equazione}
+
+Adesso, Andrea - che si è fatto più gentile - ci dice: $\epsilon=10$. Noi rispondiamo, ad esempio (tiro a caso), $\nu=1$. Vediamo se funziona: 
+\begin{equazione}
+|x-2|<1 \Longrightarrow  |\frac{x^2-4}{x-2}-5|=|x-3|<10 
+\end{equazione}
+Direi che ci siamo: la parte di sinistra dice che $x$ sta nell'intervallo $[1,3]$ e per qualunque di questi valori direi che $|x-3|$
+sta abbondantemente sotto a $10$. Ma aspettate a cantar vittoria: Andrea ci propone $\epsilon=0.1$. Noi prendiamo un $\nu$ piccolissimo,
+diciamo $0.001$. Vediamo che succede:
+\begin{equazione}
+|x-2|<0.001 \Longrightarrow  |x-3|< 0.1
+\end{equazione}
+Questa volta, $x \in [1.999,2.001]$; è forse vero che per qualunque valore nel range dato $x$ dista da $3$ non più di $0.1$?!? Certamente
+no: la distanza va da $1.001$ a $0.999$ e in ogni caso è ben più grande del valore datoci di Andrea! Siamo stati fregati! L'uccellino non
+ci ha detto la verità!
+
+Dagli esempi visti, siamo stati in grado di dire che il limite $e' 4$ e che il limite $non e' 5$, ma non abbiamo imparato a fare due cose:
+(1) a sapere che se è $4$ non può essere nient'altro; (2) a scoprire che fa $4$ senza l'aiuto dell'uccellino. La prima prendetelo come atto
+di fiducia, la sezonda sarà scopo del paragrafo successivo.
+
+\subsection{Limiti sinistri e destri}
+
+{\bf Nota:} In realtà, per ogni funfione $f$ e punto $x_0$ esistono {\em due} limiti, detti sinistro e destro; questo è molto
+importante poiché non sempre i due limiti coincidono (spesso sì, comunque). Vediamo la definizione di limite sinistro:
+
+\begin{equation}
+\lim_{x \to x_0^-} f(x) = y_0
+\end{equation}
+{\em (che si legge 'limite per $x$ che tende a $x_0$ di $f(x)$ è $y_0$')} se vale la seguente condizione:
+\begin{equation}\label{definizionelimitebis}
+\forall \epsilon >0 \exists \nu_\epsilon : \{ x<x_0 \wedge |x-x_0|<\nu_\epsilon \Longrightarrow  |f(x)-y_0|<\epsilon   \}
+\end{equation}
+
+Come semplice esercizio scrivete anche la definizione di limite destro.
+
+Una funzione $f$ si dice avere limite in un punto $x_0$ se (1) esistono i limiti destro e sinitro e (2) coincidono.
+
+
+\subsection{Limiti e infinito}
+Vi ricordo che coi limiti l'infinito ha senso di esistere come non mai... la deifnizione cambia
+TBDS
+
+\section{Limiti notevoli}
+
+\section{Derivate notevoli}
+
+\begin{tabular}{|r|l|l|}
+\hline
+$x_0$ & $f(x)$ & $\lim_{x \rightarrow x_0} f(x)$\\
+\hline
+\hline
+$0$ 		& $x^n$ & $0$ \\
+$1$ 		& $x^n$ & $1$ \\
+$+\infty$ 	& $x^n$ & $0$ \\
+\hline
+% $\frac{1}{x^n}$ & $\frac{-1}{x^{n+1}}^\dagger$ \\
+% $\sqrt{x}$ & $\frac{1}{2\sqrt{x}}^\dagger$ \\
+% $\sqrt[n]{x} (=x^{\frac{1}{n}})$ & $\frac{1}{n\sqrt[n]{x^{n-1}}}^\dagger$ \\
+% \hline
+% $\log_a(x)$ & $\frac{\log_a(e)}{x}$ \\
+% $\ln(x)$ & $\frac{1}{x} ^\dagger$ \\
+% $\ln|x|$ & $\frac{1}{x} ^\dagger$ \\
+% \hline
+% $\sin(x)$ & $\cos(x)$ \\
+% $\cos(x)$ & $-\sin(x)$ \\
+% $\tan(x)$ & $\frac{1}{\cos^2(x)} (=1+\tan^2(x))$ \\
+% \hline
+% $\arcsin(x)$ & $\frac{1}{\sqrt{1-x^2}}$ \\
+% $\arccos(x)$ & $\frac{-1}{\sqrt{1-x^2}}$ \\
+% $\arctan(x)$ & $\frac{1}{x^2+1}$ \\
+% \hline
+% $a^x$ & $a^x \ln a$ \\
+% $e^x$ & $e^{x \dagger}$\\
+% \hline
+% $\sinh(x)$ & $\cosh(x)^\dagger$ \\
+% $\cosh(x)$ & $-\sinh(x)^\dagger$ \\
+% $\tanh(x)$ & $\frac{1}{\cosh^2(x)}^\dagger$ \\
+% \hline
+% $arcsinh(x) (= ln|x + \sqrt{x^2+1}|)$ & $\frac{1}{\sqrt{1-x^2}} ^\dagger$ \\
+% $arccosh(x) (= ln|x \pm \sqrt{x^2-1}|)$ & $\frac{-1}{\sqrt{1-x^2}} ^\dagger$ \\
+% $arctanh(x) (= \frac{1}{2} ln|\frac{1+x}{1-x}|)$ & $\frac{1}{x^2-1} ^\dagger$ \\
+\hline
+\end{tabular}
+
+\section{Limiti: uso pratico}
+
+Il modo migliore per affrontare i limiti è di {em non} sfruttare la definizione (che serve solo per le interrogazioni) ma adottare
+i trucchettini che v'insegnerò, quasi fossero dogmi (mica li ho inventati io, sia chiaro!).
+
+Una volta trovati i limiti dei cosiddetti 'mattoncini', potrete usarli liberamente per trovare i limiti fi unzioni ben più complesse.
+
+Trattiamo tutti i limiti 'notevoli' come esercizi, e poi mettiamoli alla fine in una tabella riassuntiva (che deprecabilmente
+fotocopierete e lillipuzianamente metterete negli astucci, ...).
+
+\begin{esercizio}
+$\lim_{x \rightarrow 0} log(x)=$
+\end{esercizio}
+
+
+%\subsection{Trucchi coi limiti}
+% TODO(ricc): Hospital , deriva su e giù.
+

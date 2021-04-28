@@ -1,0 +1,202 @@
+\label{utilita}
+\chapter{Utilit\'a varie}
+
+In questo capitolo sono descritte alcune cose interessanti di pubblica utilit\'a che a mio parere non meritano posto in un capitolo particolare,
+ma che devono essere menzionate perch\'e usate da qualche parte.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% BINOMI NEWTON
+\label{binominewton}
+\section{Binomi di Newton}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+I binomi di Newton sono assolutamente fondamentali in statistica e tornano utili quando si affrontano certi problemi con i polinomi. Proviamo a sviluppare a mano $(x+1)^6$:
+\begin{equation}
+(x+1)^6=x^6+6x^5+15x^4+20x^3+15x^2+6x+1
+\end{equation}
+Vi potreste chidere: da dove cacchio vengon fuori i numeri $1,6,15,20,15,6,1$?!? Questi numeri vengon fuori dal triangolo di Tartaglia che sicuramente avrete visto allle medie.
+Ma esiste un modo matematico rigoroso per definirli, ammesso che sappiate cos'\'e un fattoriale (\refpagref{fattoriale}). Definiamo binomio di Newton $\binom{n}{k}$ (e lo leggiamo "$n$ su $k$") il seguente:
+\begin{equation}
+\binom{n}{k} \doteq \frac{n!}{n!(n-k)!}
+\end{equation}
+Il binomio di Newton gode di quattro propriet\'a fondamentali, che chiameremo: {\em unariet\'a} ($\forall n \binom{n}{0}=1$); {\em ennariet\'a} ($\binom{n}{1}=n$),
+ {\em simmetria} ($\binom{n}{k}=\binom{n}{n-k}$) e {\em tartagliet\'a} ($\binom{n}{k}+\binom{n}{k+1}=\binom{n+1}{k+1}$). Quest'ultimo \'e la base su cui si basa il triangolo di Tartaglia.
+\notaric{guarda che sia corretto!!!}
+Io adoro anche il principio di {\em cin-cin} ($\binom{n}{2}=\frac{n(n-1)}{2}$), che \'e il numero di cin-cin che fanno $n$ persone non maleducate che brindano.
+Il principio di simmetria vi torner\'a spesso utile quindi CAPITELO! Esempio: $\binom{10}{9}=\binom{10}{1}=10$. Comodo, no?
+
+\begin{equation}
+(a+b)^n=
+	\binom{n}{0}a^n+\binom{n}{1}a^{n-1}b^1+\binom{n}{2}a^{n-2}b^2+\cdots+\binom{n}{n-1}a^1b^{n-1}+\binom{n}{n}b^n,
+\end{equation}
+dove:
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ESPONENTI
+\label{esponenti} \section{Gli esponenti}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Vorrei perdere qualche riga sull'argomento esponenti poich\'e la gente ha spesso difficolt\'a con essi.
+L'esponenziazione \'e un'operazione che si scrive $a^b$ e si legge $a alla b$. In generale (se $b$ \'e intero),
+il suo significato \'e: prendi $a$ e moltiplicalo per se stesso tante volte quante \'e $b$: $a^b \doteq \underbrace{a\cdot a \cdot a \ldots \cdot a}_{b volte}$.
+
+Essa gode di alcune interessanti propriet\'a (poniamo $a > 0$):
+
+\begin{eqnarray}
+a^{b+c} = a^b \cdot a^c
+a^b \cdot c = (a^b)^c
+a^0 = 1
+a^{-n}=\frac{1}{a^n}
+\end{eqnarray}
+
+Alcuni esempi: $2^6=2^32^3=2^42^2$; $10^6=(10^2)^3=(10^3)^2$ (ovvero un milione \'e sia il cubo di cento che il quadrato di mille). 
+
+Si pu\'o esponenziare un valore nullo? $0$ pu\'o essere elevato a qualunque cifra tranne che a $0$ (e far\'a sempre 0), poich\'e $0^0$
+introdurrebbe un disturbo nella Forza, pensateci: $(qualunque cosa)^0 = 1$ e $0^{qualunque cosa} = 0$; se facessimo $0^0$ il mondo
+esploderebbe trasformandosi in qualcosa di ancora pi\'u incomprensibile\footnote{Almeno secondo la teoria di qualcuno...}. In realt\'a
+si pu\'o aggirare il problema per vedere chi vince mettendoci due cose che tendono a zero e facendo il limite. Esempio:
+$\lim_{x \rightarrow 0} x^x$, $\lim_{x \rightarrow 0} \sinh(x)^{\sin(x)}$, e cos\'i via.
+
+Si pu\'o esponenziare con una base negativa? Ni. Se l'esponente \'e intero ($0,10,-5,\ldots$) si pu\'o fare, e il risultato
+coincide con il valore positivo a meno del segno; il segno sar\'a negativo se il numero \'e dispari, positivo se pari. Tutte 
+queste cose le potete vedere da voi sfruttando la definizione.
+
+Veniamo ora alla cosa pi\'u seria: si pu\'o esponenziare con esponente reale? Anzitutto dobbiamo esigere che la base sia non negativa;
+togliamo pure la base nulla poich\'e ha poco senso. A questo punto, si pu\'o definire l'esponenziale di base positiva e esponente $razionale$:
+\begin{eqnarray}
+a^{\frac{p}{q}} \doteq \sqrt[q]{a^p}
+\end{eqnarray}
+
+\esempio{
+$4^{1.5}=8$; 
+$2^{4.5}=16 \sqrt{2}$; 
+$10^{0.2}= \sqrt[5]{10}$; 
+$9^{0.5}=3$; 
+$43^{0.763}=\sqrt[1000]{43^{763}}$; }
+
+Lo so, lo so, vi avevo promesso i reali. Ci arriviamo. A dir il vero, non ho la pi\'u pallida idea di come calcolare una cosa come $2^\pi$. So solo dirvi che esiste e che fa poco pi\'u di $8$, e si avvicina ancor di pi\'u a $2^{3.14}$. Altro dirvi non vo'.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% FATTORIALE
+\label{fattoriale} \section{Il fattoriale}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Il fattoriale \'e uno dei pi\'u semplici operatori che si definiscono {\em ricorsivamente}. La definizione \'e questa:
+\begin{eqnarray}
+fatt(0) \doteq 1\\
+fatt(n+1) \doteq n \cdot fatt(n)
+\end{eqnarray}
+\esempio{I primi valori della serie sono: $1,1,2,6,24,120,720,5040,\ldots$. $fatt(3)=6; fatt(4)=24; fatt(7)=5040$,...}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% FIBONACCI
+\label{fibonacci} \section{I numeri di Fibonacci}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+I numeri di Fibonacci sono una serie di numeri che potete osservare (almeno per i primi numeri della serie, dato che \'e infinita) su un lato del tetto della chiesa di Notre Dame a Parigi. Ebbene s\'i.
+
+Questa serie \'e definita in modo ricorsivo, esattamente come il fattoriale:
+
+\begin{eqnarray}
+fib(0)   \doteq 0\\
+fib(1)   \doteq 1\\
+fib(n+2) \doteq fib(n)+fib(n+1)
+\end{eqnarray}
+
+E' abbastanza semplice da dimostrare che all'infinito hanno un andamento del tipo
+$fib(n) \approx \alpha^n$, con $\alpha=\frac{-1+\sqrt{5}}{2} \approx 1.618$
+(detto anche numero aureo, noto gi\'a agli antichi greci).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% GRAFICI CARTESIANI
+\label{graficicartesiani} \section{I grafici cartesiani}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Nel capitolo funzioni (cap. \refpagref{funzioni}) ho dato per scontata la parte grafica delle funzioni stesse. Credo sia di {\em massima} importanza sapere disegnare un funzione, poich\'e d\'a una comprensione molto pi\'u profonda del problema che ci si sta ponendo. Inoltre, poich\'e i numeri non mentono, consente di accorgersi visivamente di certi errori di calcolo. E' per questo che \'e importante imparare a disgenare funzioni e ad acquisire quel colpo d'occhio che getta un 'ponte' tra equazioni e relativi disegni.
+
+Come si disegna un grafico? Anzitutto prendete due semirette perpendicolari, una che va a nord/su (che chiameremo asse delle $y$)
+e una che va a est/destra (asse delle $x$). Poi vi consiglio di fare 4-5 stanghette in ciascuno dei 4 punti cardinali equidistanti
+da loro. Se la carta che avete \'e quadrettata, tanto meglio: rendete ogni stanghetta lunga un quadretto. Ogni punto del piano
+(inteso come coppia di numeri che indicheremo con $P \equiv (x;y)$) pu\'o essere ora disegnato. Non \'e proprio come disegnare
+donne nude, ma vi assicuro che d\'a la sua parte di gusto. Poniamo ad esempio $A \equiv (3,4)$: si legge come "punto $A$ di
+coordinate $(3,4)$. Come si disegna? Ebbene, si prende la $x$ (che vale 3) e si va lungo l'asse $x$ (ovvero verso est) di 3 tacche.
+Poi si sale a nord di 4 tacche. Attenti ai segni! Il punto $(3;-4)$ indica di andare a est di 3 e a nord di $-4$, quindi di
+retrocedere di $4$ tacche a nord, quindi fondamentalmente di andare a sud di $4$, siete d'accordo? Esiste un punto 'raccomandato'
+detto origine (che si chiama con la sua iniziale, $O$). Esso \'e sull'intersezione degli assi (cio\'e \'e l'unico punto che non
+\'e n\'e a nord n\'e a sud, n\'e a est n\'e a ovest).
+
+\esercizio{Provate a disegnare i $4$ punti $(\pm 3;\pm 4)$ e i due punti $A \equiv (5;0)$ e $B \equiv (0;5)$. Quali sono le distanze di questi punti dall'origine?}
+
+Il bello dei diagrammi cartesiani \'e che per molte cose esiste sia la rappresentazione grafica sia la rappresentazione sotto forma di equazione. Vedere i nessi tra le due cose \'e affascinante per molti, e se siete arrivati a leggere fin qui vuol certamente dire che per voi - se non altro - non \'e soporifero. Prendiamo il concetto di $distanza$: la distanza tra due punti $A\equiv(x_A;y_A);B\equiv(x_B;y_b)$ \'e $graficamente$ la lunghezza del segmento che unisce i due punti, mentre \'e $analiticamente$ il numero: 
+\label{distanza euclidea}
+\begin{equation}
+d_{Eucl} \doteq \sqrt{(x_A-x_B)^2+(y_A-y_B)^2}
+\end{equation}
+Questa distanza \'e detta euclidea poich\'e i matematici - che non sono mai contenti - ne hanno inventate infinite altre. Io ne conosco altre due, e giusto per divertimento ve ne dico una che chiameremo 'distanza in isolati':
+\begin{equation}
+d_{Isol} \doteq |x_A-x_B|+|y_A-y_B|
+\end{equation}
+Il nome derivata dal fatto che questa distanza \'e effettivamente la distanza in chilometri tra due punti supponendo che ci siano grattacieli tra le varie strade, che le strade siano tutte parallele o perpendicolari tra loro,  e che quindi si possa camminare $solo$ in orizzontale o in verticale.
+
+Se disegnate nel diagramma il punto $C\equiv(3;-4)$ e l'origine $O$, potete divertirvi a calcolare la distanza euclidea e 'in isolati' del punto dall'origine. Vengono due bei numerelli, e se non ci credete potete verificarli col righello.
+
+Ora veniamo a qualcosa di pi\'u complicato. Se vi ho insegnato bene a disegnare un punto, credete di potervela cavare a disegnarne 2? E 3? E infiniti?
+Credete di no? Beh, pensate che lo fate (quasi) tutti i giorni, ad esempio quando disegnate un cerchio o una lettera dell'alfabeto o un ditone.
+
+Supponiamo che vi dia una funzione (le studierete meglio al cap. \refpagref{funzioni}), ad esempio $y=x^2-2x$. Provate a disegnarla. Sembra difficile?
+Non lo \'e, fidatevi. Poich\'e la funzione mangia $x$ e sputa $y$, vi conviene prendere delle $x$ a casaccio (le mie preferite sono le seguenti 5:
+$-2;-1;0;1;2$) e vedere quanto vale $f$ in quei 5 punti. Vediamo di fare una tabella:
+
+\begin{tabular}{|r||c|c|c|c|c|c|}
+\hline
+x & -2 & -1 &  0 & 1  &  2  & \ldots \\
+\hline
+y &  8 & 3  &  0 & -1  & 0  & \ldots \\
+\hline
+\end{tabular}
+
+Siete persuasi? Bene, adesso disegnate i 5 punti trovati. Ricordate che avete a disposizione tutti i punti che volete.
+Ad esempio, volete disegnarla meglio a destra? Calcolate $f(3)$ e avete un punto in pi\'u a destra. Volete andare a sinistra?
+Tentate con $f(-3),f(-4),\ldots$. Avete tutto il tempo che volete. Volete raffinare i punti? Vi consiglio di provare con
+$-\frac{1}{2},\frac{1}{2},\frac{3}{2},\ldots$. Volete raffinare ancora di pi\'u? Provate con $0.1,0.2,0.3,\ldots$ ma qui
+io non vi aiuto pi\'u perch\'e alla mia et\'a tale precisione \'e superiore a quella delle mie mani ormai...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% FIBONACCI
+\label{ricorsione} \section{La ricorsione}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+La ricorsione \'e un concetto che ben si sposa con certi aspetti della matematica. Ad esempio,
+\'e utile a ocmprendere i fattoriali o i numeri di Fibonacci. In genere una definizione ricorsiva
+\'e una definizione di una successione (cap. \refpagref{successioni}) in due parti: si d\'a intanto
+la definizione del primo valore, poi si d\'a la definizione di ogni pezzo in funzione del precedente.
+Esattamente come i pezzi di un domino, questi valori prendono forma a cascata. Vediamo un esempio 'idiota':
+defininiamo la successione $scemo_i$. Anzitutto, la successione $pippo_i$ (ancor prima di sapere che cosa sia)
+\'e un insieme di valori esattamente come una funzione: $pippo_0$ di solito \'e il suo primo valore, poi viene
+$pippo_1$, poi $pippo_2$, e dopo 1000 valori avremo $pippo_{999}$...
+
+\begin{eqnarray}
+pippo_0=10;\\
+pippo_{n+1}=pippo_n+3.
+\end{eqnarray}
+
+La successione $pippo$ poteva essere definita cos\'i: $pippo_0=10;pippo_1=13;pippo_2=16;pippo_3=19;\ldots$. Ma vi rendete conto che non posso stare qua fino a sera a dirvi tutti i valori? La definizione ricorsiva mi sembra sia una bella comodit\'a, no? Il punto \'e proprio quello.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

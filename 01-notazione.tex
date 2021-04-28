@@ -1,0 +1,172 @@
+\label{notazione}
+\chapter{Notazione}
+
+In questo capitoletto tratteremo il difficile problema di capirci: non solo quando si parla italiano (il che e' lasciato
+alla mia capacita' di scriverlo e a quella delle vostre maestre delle elementarii), ma anche quando si parla matematichese
+(con quegli strani simboli come $\forall$, $\nu$, $\doteq$, $|$, \ldots). Questo capitolo vuole in parte spiegare come i
+matematici parlano matematichese (80\% circa) e in parte come {\em io} parlo matematichese (il rimanente 20\%).
+Tenetelo in considerazione almeno ogni tanto; ora come ora, vi do il permesso di saltarlo, poiche' e' certamente il piu' noioso.
+
+\section{Insiemi famosi}
+
+Insiemi notevoli:
+
+* $\mathbb{N}$: Questo e' l'insieme dei \textbf{Naturali}, ovvero {0,1,2,3, .. 42, 100, 1000, 1000000, ... , e tanti altri }. Quelli che in
+  italiano chiamiamo numeri interi in matematica si chiamano numeri naturali.
+
+* $\mathbb{Z}$: L'insieme degl'\textbf{Interi} e' simile al precedente ma include anche i numeri negativi. 
+ E' grande esattamente il doppio di $\mathbb{N}$, eppure e' grande uguale ad $\mathbb{N}$ \footnote{Eh gia', strana cosa gli infiniti. Si puo' dimostrare che la cardinalita' di N e Z sono uguali, e le sorprese non sono finite.. }.
+ I numeri che contiene sono $0,1,-1,42,-42,1000,-1000$, e cosi' via.
+
+* $\mathbb{Q}$: Questo e' l'insieme dei \textbf{Razionali}, ovvero l'insieme dei numeri frazionari espriminbili come $\frac{p}{q}$.
+Alcuni esempi sono: $1,2/5,3/4,-42$ . Da notare che i razionali contengono gli interi ma contengono moltissimi piu' numeri.
+E' un insieme molto denso nel senso
+che tra i suoi 2 valori $1/10$ e $2/10$ ci sono infiniti valori. La cosa forse piu' incredibile e' che (Peano lo dimostro' per primo)
+la cardinalita' di $\mathbb{Q}$ e la stessa di $\mathbb{N}$. Lo so, assurdo. Eppur vero. L'infinita' di questi interi e infiniti ad essa
+isomorfi e' di difficile comprensione, ve lo concedo.
+
+* $\mathbb{R}$: insieme dei \textbf{reali}. Chiameremo $\mathbb{R}+$ l'insieme dei reali >= 0 e con $\mathbb{R}-$ i reali con x<=0, e con $\mathbb{R}*$ l'insieme dei reali $senza lo \{0\}$.
+
+* $C$: insieme dei \textbf{complessi}. I complessi meritano un capitolo a parte. L'insieme \egrave isomorfo a $R^2$ (ovveri tutti i punti in un piano).
+
+* $\mathbb{R}^3$: insieme di terne di reali. In matematica non esiste ma in fisica si usa un casino per definire la posizione di un punto nello spazio
+e ci tenevo a contestualizzarlo qui.
+
+\subsection{simboli}
+
+\begin{enumerate}
+  \item{$\doteq$} Simbolo di definizione; il $90\%$ delle volte si intende: definisco ci\'o che sta a {\em sinistra} con ci\'o che sta a {\em destra}. Ad esempio: $ x \item{$\doteq$} 2$ vuol dire: definiamo X come il numero 2 (facile),
+  mentre con $ f(x) \item{$\doteq$} x$ intendiamo: definiamo come $f$ la funzione che e' uguale a $x$ per ogni $x$, ovvero la funzione identita' (molto piu' coomplesso). Nel primo caso associamo a un acino d'uva il valore 2, nel secondo
+  associamo a un grappolo d'uva tanti valori diversi che dipendono da che acino sia. 
+  \item{$\equiv$} Simbolo di equivalenza; $a \equiv b$ vuole dire che $a$ \'e equivalente a $b$ (el $90\%$ delle volte si intende: definisco ci\'o che sta a {\em sinistra}
+  con ci\'o che sta a {\em destra}). E' qualcosa di pi\'u forte dell'uguaglianza (so che fa strano, ma pensate a dire $f(x)=g(x)$ e a dire $f(x) \equiv g(x)$: nel primo caso
+  cerchiamo di vedere per quali $x$ $f$ e $g$ si ugagliano, nel secondo stiamo dicendo che le due funzioni sono perfettamente identiche).
+\end{enumerate}
+
+\section{Come leggere una funzione}
+
+\subsection{Una funzione facile: una retta}
+
+Cominciamo con un esempio facile. Proviamo adesso a leggere insieme una formula "complessa" e cercare di sfatare i miti.
+
+\begin{equation}
+  y = a x + b 
+\end{equation}
+
+Oppure (piu esplicita): 
+
+\begin{equation}
+  f(x) = a x + b 
+\end{equation}
+
+Come leggerla: la funzione $f$ o $y$ e' funzione della variabile X. Quanto vale? Beh, cambiando a casaccio X e assegnadogli valori
+come 0, 1, 42, 1000, .. la funzione vi dice che il suo valore sara', rispettivamente: $b$, $a+b$, $42a+b$ e $1000a+b$.
+
+La parte piu' complessa di questa operazione e' capire il ruolo di tutte quelle lettere, per cui faro' uno sforzo a dirlo in modo semplice e chiaro:
+
+* X e' la variabile, e in quanto tale puo' far cio' che vuole. La funzione "itera" 
+  (o meglio, si muove) al variare di X e quindi X e' libera di pascolare dove e come meglio crede.
+* $a,b$ sono invece dei coefficienti noti. Sono un po' ipocriti, lo ammetto, perche' il matematico sa che i valori sono fissi
+  ma invece di dire che valgono, ad esempio, 2 e -3, diciamo semplicamente $a,b$. C'e' un motivo aldila' del sadismo puro:
+  in genere se facciamo cosi' e' perche' l'andamento concettuale della funzione non cambia molto al cambiare di a,b. Lo capiremo
+  meglio durante lo studio di funzione.
+
+\subsection{Una funzione piu' complessa: un generico polinomio}
+
+Questa e' abbastanza criptica:
+
+\begin{equation}
+  f(x)= \sum_{i=0}^n a_ix^i 
+\end{equation}
+
+% = a_nx^x+a_{n-1}x^{n-1}+\ldots+a_1x+a_0
+
+Essa va letta come: somma per i (parametro libero di spaziare su N valori) che va da $0$ a $n$ di $a_i$ che moltiplica $x$ alla $i$.
+
+La parte a mio avviso piu' difficile qui e' capire cosa e' un numero e cosa e' una variabile.
+
+Come sempre, siamo in una funzione di $x$ quindi capiamo dal lato a sinistra dell'uguale che la variabile e' la $x$.
+E il resto? Cosa sono quei pedici? 
+Ebbene, ricordate il caso facile $ a x + b $? Bene, ora iniziamo una discussione virtuale col vostro professore:
+
+- Bene, ora estendila ad una generica equazione di grado due
+- Voi: facile, basta aggiungere un X quadro, con un coefficiente a raglio davanti:
+
+\begin{equation}
+  f(x)= a x + b + c x^2
+\end{equation}
+
+Si pero' e' bruttina (ha i coefficienti a raglio, a,b,c moltiplicano rispettivamente frado 1,0,2, non va bene),
+permutiamo i coefficienti e rendiamola piu' leggibile:
+
+\begin{equation}
+  f(x)= a x^2 + b x + c
+\end{equation}
+
+Molto meglio! Ovvio che in questo caso i coefficienti a,b della retta sono ora b,c, ma poco male.
+
+- Bene, bravo, ora generalizzala ad un'equazione di grado tre:
+
+- Nulla di piu' facile prof, ormai ho capito:
+
+\begin{equation}
+  f(x)= a x^3 + b x^2 + cx + d
+\end{equation}
+
+- Bene, bravissimo! Ora generalizzala ad un'equazione di grado N:
+
+- Uhm, N? che significa N? Dieci? Di piu'? Beh cosi' a occhio se N fosse anche 100 verrebbe fuori qualcosa tipo:
+
+\begin{equation}
+  f(x)= a x^100 + b x^99 + ... + v x + z
+\end{equation}
+
+Ora ho un problem amolto piccolo, le lettere sono solo 21 (26 se scomodiamo le anglosassoni), ma io ho 101 coefficienti qui,
+come faccio? Beh i matematici hanno risolto questo problema con un trucco: invece di scomodare una lettera diversa $a,b,c$ 
+usiamo una sola lettera $a$ e la iteriamo da 1 a 100: $ a_1, a_2, a_3, ... a_100 $. Facile no? Possiamo addirittura anche
+assegnare $ a_0, a_{-1} $ alla bisogna, purche' siano iterabili (quindi della cardinalita' di $\mathbb{N}$ , non di $\mathbb{R}$). 
+
+Bene, allora un modo piu' elegante di esprimere questa notazione e': 
+
+\begin{equation}
+  f(x)= a_100 x^100 + a_99 x^99 + ... + a_1 x + a_0
+\end{equation}
+
+Ora, se voleessimo fare i pignoli e togliere quei puntini di sospensione che fanno molto "il mio completo elegante e'
+in lavatrice quindi sono venuto a fare l'esame in tuta", potremmo scomodare una sommatoria e fare un'ottima impressione: 
+
+\begin{equation}
+  f(x)= \sum_{i=0,100}^100 a_i x^i 
+\end{equation}
+
+Da notare che qui abbiamo due "variabili": la X che e' la  nostra cara variabile di funzione e la $i$. Si noti che la $i$
+serve solo per "sgirellare" la sommatoria, vuol dire: hey tu, si', proprio tu: prendi un generico $i$ che va da 0 a 100 e 
+srotolalo al mio segnale. 
+
+* Quando $i$ vale 0, sostituiscila e scrivi quel che vien fuori: $a_0 x^0$ (convenzionalmente $1$), quindi  $a_0$.
+  e quindi $a_0$. Wow, questo era strano - vediamo se von gli altri e' piu' facile: 
+* Quando $i$ vale 1, $a_1 x^1$ ovvero $a_1 x$. Ok, facile.
+* Quando $i$ vale 2, $a_2 x^2$ ovvero $a_2 x^2$. Ok, facile.
+* Potrei andare avanti cosi' da 3 a 99 ma non lo faro'.
+* Quando $i$ vale 100, $a_100 x^100$ ovvero $a_100 x^100$. Ok, facile. 
+* Ora capisco. Mettendo tutti i pezzi insieme vengono: 
+
+\begin{equation}
+  f(x)= a_0 + a_1 x + a_2 x^2 + ... + a_100 x^100
+\end{equation}
+
+il che e' la versione in tuta del piu' elegante: 
+
+\begin{equation}
+  f(x)= \sum_{i=0,100}^100 a_i x^i 
+\end{equation}
+
+Ed eccoci da capo.
+
+Come vedete, quando i matematici scrivono queste equazioni criptiche, non lo fanno per sfoggiare (ok, forse un po'..),
+lo fanno soprattutto per rendere un concetto complesso con un piccolo numero di caratteri, che definisce \em{precisamente}
+quel che vogliono definire. Questa notazione e' fondamentale per esprimere concetti complessi. Voi potreste pensare: ma si'
+dai Riccardo, siamo onesti, potevi usare i 3 puntini invece della sommatoria, volevi solo fare lo sborone. In verita' la
+risposta corretta e': si', in questo caso particolare i 3 puntini erano sufficienti a far capire questa sommatoria, ma come
+avrei potuto spiegare qualcosa di complesso come una sommatoria tripla? Con 3 serie di 3 puntini? E chi itera su chi? Con 
+piu' somme, ci saremmo tutti confusi e la versione con $\varSigma$ sarebbe l'unica con spiegazione univoca.

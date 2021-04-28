@@ -1,0 +1,122 @@
+\documentclass[a4paper,11pt]{book}
+%\documentclass{memoir}
+% \documentclass[a4paper,11pt]{report}
+\usepackage{fancyhdr}
+\usepackage{textcomp}
+\usepackage[official]{eurosym}
+%\usepackage[pdftex,bookmarks,colorlinks]{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{epigraph}
+
+
+%\usepackage{mathcal}
+% per i gradi
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+%\usepackage[italian]{babel}
+
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\leftmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt}
+% \fancypagestyle{plain}{
+%    \fancyhead{}
+%    \renewcommands{\headrulewidth}{0pt}
+% }
+
+
+\newcommand{\notaric}[1]
+	{{\bf NOTA RIC}\underline{#1}}
+
+\newcommand{\egrave}{\`{e}}
+
+\newcommand{\esempio}[1]
+%	{{\bf Esempio. } {\emph #1}}
+	{{\bf Esempio. } #1}
+
+\newenvironment{esercizio}
+{\rule{1ex}{1ex}% {\bf Esercizio}
+	\hspace{\stretch{1}}}
+{\hspace{\stretch{1}}%
+	\rule{1ex}{1ex}}
+
+
+\newenvironment{prerequisito}
+{\rule{1ex}{1ex}
+	{\bf Domande propedeutiche}
+	{\emph Prima di passare oltre, \\'e opportuno che sappiate rispondere alle seguenti domande (se non sapete rispondere ad esse, difficilmente riuscirete a capire ci\\'o che segue).}\\
+	\hspace{\stretch{1}}}
+{\hspace{\stretch{1}}%
+	\rule{1ex}{1ex}}
+	
+	
+\newenvironment{equazione} % per andare a capo col \\
+{\begin{equation}
+   \begin{array}{l}
+}
+{\end{array}
+   \end{equation}
+}
+
+% la scheda di una funzione, per ora \\'e un elenco, ma in futuro sara una tabellozza direi.
+% \newenvironment{schedaf}
+% { \begin{description}}
+% { \end{description}}
+% \newcommand{\rigaf}[2]{\item{\underline{\bf  #1}} #2}
+\newenvironment{schedaf}
+{ \begin{eqnarray}[rcl]}
+{ \end{eqnarray}}
+\newcommand{\rigaf}[2]{\textrm{\underline{\bf  #1}} &  & \textrm{#2} \\}
+
+
+	
+%\newcommand{\esercizio}[1]	{{\bf Esercizio. } {\emph #1}}
+%\newcommand{\defpagdef}{}
+\newcommand{\refpagref}[1]{\ref{#1}, pag. \pageref{#1}}
+\newcommand{\defpagdef}[1]{def. \ref{#1}, pag. \pageref{#1}}
+\newcommand{\sezpagsez}[1]{sez. \ref{#1}, pag. \pageref{#1}}
+\newcommand{\senza}{\setminus}
+%\newcommand{\insieme}[1]{\mathbb{#1}}
+\newcommand{\insieme}[1]{\mathbf{#1}}
+\newcommand{\novanta}{\frac{\pi}{2}}
+\newcommand{\andazzo}{\mathcal{A}nd}
+
+\newtheorem{definizione}{definizione2}
+
+
+ \author{Riccardo Carlesso}
+ \title{
+   Matematica for dummies \\
+ \large
+   Imparare la matematica divertendosi  \\
+   (cominciando dai seni)
+ }
+
+\begin{document}
+  \maketitle
+  \tableofcontents
+  \input{00-intro}
+  \input{01-notazione}
+  \input{02-numeri}
+  \input{03-funzioni}
+  \input{04-trigonometria} 
+  \input{05-limiti}
+  \input{06-derivate} 
+%  \input{integrali} 
+  \input{07-equazionidifferenziali} 
+  \input{08-taylor} 
+%  \input{statistica}
+  \input{09-utilita}
+%  \input{autore}
+\end{document}

@@ -1,0 +1,576 @@
+\label{funzioni}
+\chapter{Funzioni}
+
+In questo capitolo si parler\'a di funzioni. Nella prima parte ne verranno dati definizioni ed esempi, 
+nella seconda si parler\'a dello 'studio di funzione', e nella terza si affronteranno tanti piccoli temi
+collaterali. Ho speso molte parole per spiegarne il concetto poich\'e \'e a mio parere uno dei pi\'u 
+affascinanti e complessi della matematica: l'uomo riesce con facilit\'a a ragionare su numeri, ma su qualcosa
+che associa infiniti numeri a infiniti numeri tende ad avere sempre delle perplessit\'a. Molto spazio verr\'a
+dato alle funzioni notevoli, poich\'e \'e a partire da questi mattoncini che si costruiscono quei maestosi
+castelli che i professori mettono nei vostri compiti...
+
+\prerequisito{Dovete guardare prima i grafici.}
+
+\section{Cos'è una funzione}
+
+Cosa è una {\em funzione}? Essa \'e una applicazione che associa tutti 
+i valori di un dominio (ovvero un insieme $\mathbf{X}$) a certi valori su un 
+codominio $\mathbf{Y}$ (un altro insieme). 
+\begin{equation}
+f: x \in \mathcal{X} \mapsto \mathcal{Y}
+\end{equation}
+
+Detto in parole pi\'u povere, {\em \'e un oggetto 
+che mangia numeri e sputa fuori numeri in maniera prevedibile}. Se gli date da 
+mangiare una stessa cosa (per esempio $x_0:=46,2$) e lui 'gradisce' questa 
+cosa (ovvero $x_0$ è contenuta nel dominio $\mathcal{X}$), la funzione 
+sparer\'a sempre fuori uno stesso numero. Esso \'e detto $f(x_0)$. Il concetto di funzione
+è molto importante poichè è quanto di pi\'u generale ci sia: una funzione pu\'o 
+mangiare qualunque cosa e 'spararla' in quasi qualunque altra cosa. Ci\'o che \'e pi\'u
+difficile da capire \'e che il nome della funzione \'e indipendente da quello che le 
+si d\'a in 'ingresso'.
+
+Vediamo di inventarci qualche funzione per fissare il concetto.
+
+\begin{equation}
+% f(x) \doteq x+3; 
+%\end{equation}
+%\begin{equation}
+ f(0) \doteq 3; \\
+ f(1):=4; \\ 
+ f(2):=5; \\ 
+ f(-5):=-2; \\ 
+  \ldots
+\end{equation}
+
+La funzione che ho scritto potrebbe essere qualunque cosa; probabilmente la pi\'u
+semplice funzione che si comporti come lei \'e: $f_1(x)=x+3$\footnote{Ma attenti,
+esistono un bel po' di funzioni che rispettano questi vincoli. E' un po' come cercare
+moglie secondi i vincoli: '2 occhi', '2 seni', 'che respiri'. Un altro esempio, solo per persuadere
+i pi\'u scettici, \'e $f(x)=4+sen(\frac{\pi}{2}(x-1))$}. Non bisogna sottovalutare 
+la \emph{potenza} di questa notazione, per cui prendiamoci un po' di tempo per 
+capirla. Quando scrivo $f(x \in \mathbf{R})=x+3$ intendo un oggetto che, dato un numero, 
+vi risponde con un altro numero. In ingressso dovete dargli un numero reale e in uscita 
+vi restituir\'a un altro numero reale. Per capirci meglio, daremo d'ora in poi a $f$ il 
+simpatico nome di '{\bf sommatre}'
+
+Mi piacerebbe spiegarvi le funzioni in un modo alternativo, come me lo spieg\'o il mio prof
+di Geometria, Massimo Ferri nel 1995. Pensate di avere un asse orizzontale in cui \'e libero di muoversi un cannone;
+esso pu\'o sparare solo in verticale, su o gi\'u, ma sempre in verticale rispetto a dov'\'e. Ora
+immaginate che il cannone sia programmato per sparare sempre in un medesimo punto (esempio in $3$)
+se si trova in una certa posizione (ad esempio $0$). Se il cannone si trova nel punto $-5$ (che sta
+ad ovest, per intenderci), sparer\'a sempre in basso all'altezza di $-2$. Infine, quando si trova
+in $-3$, si spara addosso, ma questo non \'e un problema che ci tocchi. Se dopo aver istruito il
+cannone su come sparare, lo fate andare all'infinito a destra e a sinistra, potrete osservare la scia
+che lascia su un ipotetico foglio di carta; questa \'e il {\em grafico} della funzione. Cos'\'e la 
+funzione? L'equazione? Il grafico? Il carroarmato? No! Essa \'e l'insieme di istruzioni che avete dato al carroarmato.
+Ci\'o che pi\'u si avvicina alla sua definizione senza perdere infiniti fogli a scrivere $f(0,1,2,3,\ldots)$ \'e
+la parola 'sommatre'; ma attenti: se la funzione si complica non sempre avrete la fortuna di poterle dare un nome semplice
+quindi dovrete adeguarvi alla notazione usata in quei noiosissimi libri di matematica. Ma prima di arrivare a quella notazione,
+cerchiamo di capire il senso dietro ad essa.
+
+E' importante capire che la funzione {\bf sommatre} \'e qualcosa che somma tre al numero 
+che le date in pasto. Alcune domande {\em ben poste} potrebbero essere: quanto vale $f(0)$? Per quale
+ $x$, $f((x)$ vale 15? Quando \'e massima $f$? Quand'\'e che $f$ incontra gli assi cartesiani? 
+ Per quali valori del dominio $\mathcal{X}$  $f$ \'e definita? 
+ \footnote{Alcune domande mal poste potrebbero essere: 's\'i ok $f(x)$, ma questa benedetta $x$ quanto cacchio vale?!?'}.
+ 
+Tutte queste sono domande che vi potrebbero essere fatte quando vi si chiede di fare lo \em{studio di funzione} di $f$. 
+
+Mi ritengo soddisfatto se sapete rispondere (per iscritto) a queste domande a trabocchetto: {\bf Che cos'\'e $f(x)$? Che cos'\'e $f(t)$? Che cos'\'e $f(0)$?}  
+
+Una risposta pu\'o essere: le prime due sono \em{funzioni} (per la precisione sono sempre la nostra amica 'sommatre'), la terza \'e un \em{numero} (ed \'e il numero $3$, poich\'e $0+3=3$:
+provatelo con le vostre calcolatrici tascabili). Ma allora che cos'\'e $x$? E che differenza c'\'e tra $x$ e $t$? Questa credo sia la domanda pi\'u difficile che ci si possa fare sulle
+funzioni. Una buona risposta \'e che la $t$ \'e la $20^{ma}$ lettera dell'alfabeto anglosassone mentre la $x$ \'e la $24^{ma}$.. a parte la battuta il fatto \'e che non c'\'e alcuna differenza
+tra $f(x)$ e $f(t)$, se non il fatto che nel primo caso $f$ dipende da $x$ e nel secondo da $t$: la variabile \'e muta di per se stessa,
+e ha senso \b{solo} nella definizione stessa della funzione\footnote{La cosa diventerebbe rilevante in qualcosa
+come: $f(x)=3tx$, in tal caso $x$ \'e la variabile e $t$ sar\'a probabilmente un parametro.}; ma la funzione sar\'a
+sempre lei, nel nostro caso sar\'a sempre 'sommatre', ovvero qualcosa che mangia un numero, gli somma 3 e sputa fuori
+il risultato. Un altro modo per capirlo, \'e inventarsi un mondo senza $x$; proviamoci per un attimo. Prendiamo la nota
+funzione $f(x)=x^2+2x+1$; prima dell'ottocento, i matematici la leggevano come 'prendi un numero, elevalo al quadrato,
+poi aggiungi il doppio del numero e infine aggiungi uno'. Capirete che se un prof vi chiede se questa sia una parabola
+o un'iperbole farete abbastanza fatica a rispondergli, no? Allora diremo: $f(numero)=numero^2+2 \cdot numero+1$.
+Ancora troppo lungo. Proviamo con la $x$: $f(x)=x^2+2x+1$. Oh! Ora va meglio.
+
+Scusate la lunghezza della digressione, ma dopo anni e anni di matematica, vedo persone ancora perplesse sul vero
+significato della fatidica \em{variabile indipendente}. Potete pensare che $x$ sia una variabile \em{muta},
+assolutamente inutile, e quindi il vero modo per chiamare la nostra amica 'sommatre' in modo matematico non sia $f(x)$,
+bens\'i $f(\dot)$\footnote{credo che l'unico modo di apprezzare una funzione per ci\'o che \'e sia proprio quella di
+usare un puntino, del tipo $f(\cdot)=\frac{\cdot+1}{1+\cdot^2}$; ovvio che se usate una $x$ al posto di $\cdot$ si legge
+meglio, no?}. Ricordate: se scrivo $f(x)=x+3$ e $g(y)=y+3$, definisco la stessa funzione: $f$ e $g$
+sono {\em perfettamente identiche}!!! O se preferite $f(Franca)=Franca+3$ e $g(Iolanda)=Iolanda+3$.
+D'ora in poi, per\'o, preferiremo chiamare $x$ ci\'o che la $f()$ mangia e $y$ ci\'o che la $f$ sputa,
+e al posto della $x$ useremo $t$ se penseremo a tempi o $\theta$ se pensiamo ad angoli: i matematici ci
+tengono molto a dare significati diversi alle diverse lettere, e ne hanno cos\'i tanti che le 26 dell'alfabeto
+anglosassone non bastan loro, e devon tirarne fuori anche da quello greco ed ebraico...
+
+Vi faccio un esempio stupido: quando davanti a una birra un amico/a mi dice "Sai Riccardo, mi e' capitato X volte ...." il mio
+volto si scurisce perch\'e ho la certezza che la persona davanti a me non abbia studiato o apprezzato la matematica
+quanto me. Cos\'i come abbiamo l'archetipo delle Susan e dei Dick in inglese, cos\'i abbiamo l'archetipo delle lettere:
+
+* a,b,c sono parametri/coefficienti
+* x,y,z sono variabili reali
+* i,j,k,l,m,n sono variabili intere 
+* $\alpha , \beta , \gamma$ sono coefficienti pi\'u eleganti di a,b,c. Talvolta usati in congiunzione/parallelo (a vs alpha, ..)
+* $\theta, \vartheta, \phi$ sono angoli 
+
+Come avrete capito, l'amico avrebbe dovuto usare N e non X per avere la mia stima :) E s\'i, ovviamente la persona bacata nel cervello sono io, non l'amico. 
+
+\section{Funzioni notevoli}
+In questa sezione cercher\'o di analizzare le funzioni pi\'u famose. La maggior parte delle funzioni che vi cappiter\'a di studiare
+saranno 'case' costruite con questi mattoncini... Per ciascuna funzione cercher\'o di evidenziare le caratteristiche pi\'u
+interessanti di ciascuna, tra cui il grafico (un giorno), derivate, primitive, estremanti, poli, ..
+
+\subsection{Polinomi}
+
+Un polinomio \'e una equazione nella forma:
+
+\begin{equation}
+f(x)= \sum_{i=0}^n a_ix^i = a_nx^x+a_{n-1}x^{n-1}+\ldots+a_1x+a_0
+\end{equation}
+
+Alcuni esempi di funzione sono: $x^42+37x+41$,$3x^2+6x+3$, $x^2+1$, ma non $\frac{1}{x^2+1}$. Attenzione, anche $3-x$ e $5$
+(una delle mie funzioni preferite, l'avrete notato) sono polinomi, e questo la gente tende a dimenticarlo spesso...
+
+Attenzione, come sempre le $x^n$ sono potenze della nostra amica variabile indipendente, mentre le varie $a_0,a_1,\ldots$
+sono il DNA del polinomio stesso (non mi credete? Andate a leggervi il capitolo su Taylor, \refpagref{taylor}). Capiamolo con un esempio
+stupido: in $x^2+3x+41$ $a_0=41;a_1=3;a_2=1;a_3=0;a_4=0;a_5=0;a_6=0;\ldots$. Se non vi offendete mi fermo qua,
+dicendovi che da $a_3$ in poi tutti i coefficienti son nulli. Si dice allora che il polinomio \'e di grado $2$
+poich\'e \'e alla posizione $2$\footnote{che \'e al terzo posto, ma ai matematici piace complicarsi la vita,
+e spoiler alert! Quasi sempre hanno ragione loro...} che c'\'e l'{\em ultimo} valore non nullo. \footnote{Un modo
+molto elegante per definire il polinomio \'e di identificarlo la lista ordinata $(41,3,1)$. Ancora una volta, 
+\'e scomparsa la $x$, che guarda caso \'e l'unica cosa non importante per il polinomio!}
+
+\begin{description}
+	\item{Dominio} I polinomi non han problemi di dominio: tutto $\insieme{R}$ va bene.
+	\item{Codominio} Bazza: se ponete $x=0$ si annulla tutto meno il termine noto, quindi $f(0)=a_0$.
+	\item{Zeri} Tanti. In realt\'a ce ne possono essere tanti quanti il grado del polinomio, ma se non avete
+	gli 'occhiali' complessi ci possono essere coppie di soluzioni (complesse coniugate) che non potete vedere.
+	Esempio: un polinomio di terzo grado ha o $3$ o $1$ soluzioni. Esiste bun trucco per calcolare le soluzioni
+	di un polinomio di secondo grado \footnote{Il famoso $x=\frac{-b \pm \sqrt{b^2-4ac}}{2a}$}, un altro per le
+	equazioni di terzo e quarto grado, e - se non sbaglio - \'e stato dimostrato che non possono esistere trucchi
+	per i polinomi di grado oltre al quarto. {\em Attenti alle molteplicit\'a: $f=x^4+x$ ha 4 zeri: $(0,0,0,-1)$;
+	$-1$ \'e uno zero normalissimo, mentre $0$ (che solo per caso si pronuncia allo stesso modo) \'e uno zero di
+	molteplicit\'a tripla. Questo \'e molto importante: quando ad esempio una funzione ha uno zero doppio tende
+	non solo a passare per il punto ma a esservi tangente (ovvero arrivarci da sotto, toccarlo, e tornar gi\'a
+	proprio in quel punto - o viceversa). In generale, non trascurate la molteplicit\'a nei vostri scritti: certe
+	persone ci tengono molto ;).}
+	\item{Poli} Nessuno.
+	\item{Derivata, massimi e minimi} E' molto facile e divertente derivare polinomi. Per la propriet\'a di linearit\'a,
+		possiamo derivarla a pezzi, ovvero vale la comodissima propriet\'a che la derivata della somma \'e uguale alla somma
+		delle derivate. Se sapete derivare un generico pezzettone $x^n$ (che fa $nx^{n-1}$), sapete derivare tutto. Vien
+		fuori: $f'(x)=\sum_{i=1}^n i \cdot a_ix^{i-1} = na_nx^{n-1}+(n-1)a_{n-1}x^{n-2}+\ldots+2a_2x+a_1$. Fate attenzione
+		che \'e scomparso il termine noto $a_0$. Il nuovo polinomio ha un grado in meno dell'originale, a meno che non
+		avesse grado zero (nel qual caso rimane zero). I massimi/minimi saranno tanti, fino a $n-1$. Calcolate la derivata,
+		e di essa calcolate gli zeri. (Io dico sempre: lo studio di funzione di un polinomio \'e per il $60\%$ studio degli
+		zeri di $f$, per il $40\%$ studio degli zeri di $f'$: rimane ben poco ancora di interessante).
+	\item{Primitiva} Anche qui \'e molto facile, se sapete qual \'e una primitiva dei mattoncini $x^i$ (che \'e $\frac{x^{n+1}}{n+1}$).
+		Viene fuori: $F(x)=\sum_{i=0}^n \frac{a_i}{i+1}x^{i+1}+37 = \frac{a_n}{n+1}x^{n+1}+\frac{a_{n-1}}{n}x^{n}+\ldots+\frac{a_1}{2}x^2+a_0x+37$.
+		Il $37$ l'ho aggiunto io per ricordarvi che le primitive son tante, e nessuna ha una dignit\'a maggiore delle altre. Se volete usare
+		quella col $+0$ anzich\'e quella col $+37$, avete il mio permesso: io farei lo stesso.
+\end{description}
+
+
+\subsection{$\sin(x)$}
+
+La funzione seno (una delle mie preferite) \'e una funzione trigonometrica. Essa \'e periodica, di periodo $2\pi$. Ci\'o
+vuol dire che potete disegnarla e studiarla da $0$ a $2\pi$ (ma anche da $7\pi$ a $9\pi$!) perch\'e si ripeter\'a all'infinito con lo stesso
+andamento. Ci limiteremo a studiarla su $[0,2\pi]$. Per una definizione pratica di seni e coseni rimando al capitolo su di essi
+(\refpagref{trigonometria}). Capirete che una funzione come questa se ha uno zero ne ha infiniti, se ha un polo ne ha infiniti e cos\'i
+via... Mi limiter\'o al solo intervallo $[0,2\pi[$. Spesso potrebbe capitarvi di studiiare invece $]-\pi;\pi]$
+
+\begin{schedaf}
+	\rigaf{Dominio}{Tutto $\insieme{R}$.}
+	\rigaf{Codominio}{E' piccolissimo: $[-1;1]$}
+	\rigaf{Zeri}{$0,\pi$}
+	\rigaf{Poli}{Nessuno.}
+	\rigaf{Derivate}{$D\sin(x)=\cos(x)$. Massimo: $\frac{\pi}{2}$. Minimo: $-\frac{\pi}{2}$}
+	\rigaf{Integrali}{$\int\sin(t)dt=k-\cos(x)$. Aree: $A_S[0;\pi]=2$ \footnote{L'area del periodo \'e 4, ma l'integrale \'e nullo: vedi studi di funzione sugli integrali}.}
+	\rigaf{Altro}{La funzione e' periodica di periodo $2\pi$.}
+	\rigaf{Punti notevoli}{$f(0)=0;f(\pi/2)=1;f(\pi)=0;f(3\pi/2)=-1$.\footnote{Ce n'\'e altri, ma per essi rimando il capitolo ad essi dedicato.}}
+\end{schedaf}
+
+\subsection{$\cos(x)$}
+Come il seno \'e periodica di periodo $2\pi$: useremo, tanto per allenarci, l'intervallo $]-\pi;\pi]$.
+\begin{schedaf}
+	\rigaf{Dominio}{Tutto $\insieme{R}$.}
+	\rigaf{Codominio}{$[-1;1]$}
+	\rigaf{Zeri}{$-\pi/2,\pi/2$}
+	\rigaf{Poli}{Nessuno.}
+	\rigaf{Derivate}{$D\cos(x)=-\sin(x)$. Massimo: $0$. Minimo: $\pi$.}
+	\rigaf{Integrali}{$\int\cos(t)dt=k+\sin(x)$}
+	\rigaf{Altro}{La funzione e' periodica di periodo $2\pi$.}
+	\rigaf{Punti notevoli}{$f(0)=1;f(\pi/2)=0;f(\pi)=-1;f(-\pi/2)=-0$.}
+\end{schedaf}
+
+\subsection{$\tan(x)$}
+La tangente altri non \'e che $\frac{\sin(x)}{\cos(x)}$, e ne eredita la periodicit\'a. Anzi, \'e addirittura periodica di periodo $\pi$ (il che non inficia la frase prededente, rifletteteci). La studieremo su $]-\novanta;\novanta]$.
+\begin{schedaf}
+	\rigaf{Dominio}{$]\-novanta;\novanta[$; \footnote{C'\'e un unico buco in $\novanta$ che significa infiniti buchi a distanza $\pi$!!!}}
+	\rigaf{Codominio}{Tutto $\insieme{R}$.}
+	\rigaf{Zeri}{$0$}
+	\rigaf{Poli}{$\novanta$}
+	\rigaf{Derivate}{$D\tan(x)=\frac{1}{\cos^2(x)}=1+\tan^2(x)$ (come preferite). Massimi/minimi: nessuno.}
+	\rigaf{Integrali}{$\int\tan(t)dt=k-\log|cos(x)|$}
+	\rigaf{Altro}{La funzione e' periodica di periodo $\pi$.}
+	\rigaf{Punti notevoli}{$f(0)=0;f(\pi/4)=1;f(\pi/2^-)=+\infty;f(-\pi/2^+)=-\infty$.}
+\end{schedaf}
+
+
+\subsection{Funzioni iperboliche ($\sinh(x)$, $\cosh(x), ..)$}
+
+Le funzioni iperboliche sono fondamentalmente degli esponenziali che puzzano dannatamente di funzioni trigonometriche.
+Se li disegnate, o li derivate, sono proprio degli esponenziali. Se li guardate al microscopio (con le serie di Taylor (\refpagref{taylor})),
+troverete delle inquietanti somiglianze con i 'cugini' trigonometrici (seno con seno iperboolico, coseno con coseno iperbolico,
+e soprattutto tangente e tangente iperbolica). La cosa pi\'u buffa \'e che le funzioni sono completamente diverse (ad esempio,
+le iperboliche vanno spesso all'infinito e sono aperiodiche mentre le trigonometriche sono spesso limitate tra $-1$ e $1$ e
+sono periodiche). Vediamone la definizione.
+
+\begin{eqnarray}
+ \sinh(x) := \frac{e^x-e^{-x}}{2}
+ \cosh(x) := \frac{e^x+e^{-x}}{2}
+ \tanh(x) := \frac{sinh(x)}{cosh(x)} \bigg( = \frac{e^x-e^{-x}}{e^x+e^{-x}}\bigg)
+\end{eqnarray}
+
+Le funzioni inverse di queste tre funzioni iperboliche sono facilmente esprimibili con logaritmi. Riuscite a trovarle?
+
+\begin{esercizio}
+ Ricavate la funzione $arcsinh(x)$ e le sue sorelle. {\em Hint: $y=arcsinh(x) \Rightarrow x=\frac{e^y-e^{-y}}{2}, ponete \theta=e^y, \cdots$. Dovrebbe venir fuori qualcosa con logaritmi e radici quadrate mi pare.}
+\end{esercizio}
+
+Provate un po' a derivarli: cosa notate di strano? 
+
+\subsection{$e^x$}
+
+Che cos'\'e l'esponenziale ($e^x$)? E' una particolare funzione che viene usata tantissimo in tutti i campi dell'analisi, dell'ingegneria, della fisica; perch\'e?
+Credo la sua importanza sia dovuta al fatto che sbuca fuori magicamente dalla Equazioni Differenziali. Prima di andare avanti, vi consiglio di guardare la sezione
+sugli esponenti (\sezpagsez{fattoriali}).
+
+Come si calcola un esponenziale? Se l'argomento \'e intero, lo pu\'o fare chiunque sia dotato di addizione e moltiplicazione. Negli altri casi, la faccenda si
+complica e richiede anche le radici (quadrate, subiche, ...). Vediamo una defizizione ridondante sufficiente a definire gli esponenziali 'di esponente intero' (poniamo $a \ne 0$):
+\begin{eqnarray}
+a^0 \doteq 1\\
+a^{n+1} \doteq a \cdot a^n\\
+a^{-n} \doteq \frac{1}{a^n}
+\end{eqnarray}
+ 
+ Da questa definizione, segue che $10^0=1, 10^1=10, 10^2=100, 10^3=1000, \cdots, 10^{-1}=\frac{1}{10},10^{-2}=\frac{1}{100}, \cdots, \ldots$. Come vedete questa funzione cresce in fretta: $f(9)$ vale un miliardo, $f(18)$ vale un miliardo di miliardi e $f(-27)$ vale un miliardesimo di miliardesimo di miliardesimo\footnote{Come si pronuncia $f(-16)$?}. 
+ Questa funzione \'e sicuramente la pi\'u veloce di tutte le colleghe (potete immaginare quindi il comportamento della sua funzione inversa, il logaritmo...). Ora vediamo di capire la parte in mezzo
+ 
+Per capire $e^x$ credo dovremo cominciare da qualcosa cui siete pi\'u familiari, tipo la funzione (molto simile) $10^x$ (che si legge $10 alla x$). 
+
+\subsection{$\log(x)$}
+
+TBDs 
+
+Notiamo anzitutto che la derivata di $\ln(x)$ coincide con quella di $\ln|x|$. Se guardate i grafici,
+vi accorgete che a destra vale $ln(x)$ e a sx dell'asse y $-\ln(x)$. Qui il valore assoluto pu\'o essere visto come un 'completamento naturale di dominio'.
+
+%\subsection{Funzioni iperboliche?!?}
+% skippo va
+%tbds
+
+\section{Studi di funzione}
+
+Cosa vuol dire \em{studiare} una funzione? Vuol dire semplicemente dire tante cose interessanti di una funzione.
+Supponiamo che il vostro prof di matematica vi porti in centro citt\'a il sabato pomeriggio e vi proponga qualcosa
+di simile: lo {\em studio di persona}. Vi addita un passante e vi dice: cosa puoi dirmi di lui? Voi direte:
+\'e alto $1,70$ circa, pesa sui $70 kg$, ha una corporatura media, i capelli mori ricci e porta gli occhiali;
+ha un neo vicino alle labbra e ha dei seni particolarmente grossi. C'\'e qualcosa di non banale in ci\'o che
+avete detto: l'altezza, il peso, il colore dei capelli, degli occhi eccetera sono caratteristiche di \em{qualsiasi}
+persona. Gli occhiali, i nei, lentiggini, eccetera sono invece caratteristiche di \em{alcuni} individui, eccezioni
+della cui presenza ci si accorge ma la cui assenza passa inosservata. Difficilmente direte: "senza occhiali",
+"senza barba", "senza n\'ei visibili", o sbaglio? (Ovvio che alla polizia direte anche queste cose se si tratta di un ricercato!)
+
+Lo studio di funzione \'e qualcosa di molto simile: si tratta di delineare una funzione (come la nostra amica 'sommatre')
+secondo alcune caratteristiche comuni a {\em tutte} le funzioni, e di trovare quei tratti della funzione che sono interessanti.
+
+\subsection{Dominio e codominio}
+
+La prima cosa da studiare in una funzione \'e sicuramente il dominio di definizione della funzione stessa, ovvero l'insieme
+di valori (le $x$, per intenderci) su cui la funzione \'e definita. Alcuni esempi:
+
+\begin{equazione}
+ f_1(x)=3x^4-2x^3+87x-57\pi \\
+ f_2(x)=\sin(x) \\
+ f_3(x)=\log(x) \\
+ f_4(x)=\sqrt(x+1) \\
+ f_5(x)=\frac{(x-29)(x+3)}{(x-29)(x-12)(x-1976)} 
+\end{equazione}
+
+I casi pi\'u complicati sono certamente i primi due: teniamoli dunque per ultimi. Se conoscete la funzione logaritmo, sapete che essa \'e
+definita solo per $x>0$, quindi il $\mathcal{D}_{f_3}=\{\mathbf{R} \senza \mathbf{R}^-\}$. Attenti alla pignoleria: $\mathbf{R}^+$ comprende
+lo zero, quindi un modo carino \'e prendere tutto $\mathbf{R}$ e togliergli $\mathbf{R}^-$, liberandomi in un sol colpo dei numeri negativi e dello zero.
+Il caso $f_4$ \'e molto simile: la radice quadrata esige un argomento non negativo (ovvero i numeri minori di zero le sono indigesti). Attenti per\'o
+all'argomento: non c'\'e $x$ questa volta, ma una funzione {\em molto} pi\'u complicata: $x+1$. Abituatevi a ci\'o: per calcolare il dominio della
+funzione dovete imporre che l'argomento sia non negativo, il che produce la seguente equazione: $x+1 \ge 0$. Dunque $\mathcal{D}_{f_4}=\{x|x \ge -1\}$.
+
+Il caso $f_5$ vi capiter\'a spesso. Come sapete dalle elementari, la funzione {\em divisione} non accetta un divisore (che
+\'e la parte che sta dopo il diviso) uguale a zero, quindi se avete che la vostra funzione \'e uguale a
+$f(x)=\frac{qualcosa}{Pippo \cdot Bluto}$ dovrete imporre che {\em sia} Pippo {\em sia} Bluto siano diversi da zero.
+Ci\'o significa, nel nostro caso particolare, imporre $x$ diverso da quei tre numerini presi {\em assolutamente} a caso:
+$\mathcal{D}_{f_5} = \mathcal{R} \senza \{12;29;1976\}$. Un appunto: quei tre numeri hanno assolutamente la stessa dignit\'a,
+e non ne viene uno prima dell'altro (lo dico perch\'e molta gente pensa il contrario).
+
+Veniamo ora ai primi due: vedete qualche pezzettone di funzione che vi faccia scattare un qualche allarme? Vedete poli, radici,
+logaritmi, o cose del genere? No, dunque il dominio delle prime funzioni \'e proprio $\insieme{R}$.
+
+In generale, studiare il dominio di una funzione vuol dire partire da $\insieme{R}$, e poi cominciare a stringerlo per ogni
+funzione strana che c'\'e l\'a dentro, introducendo le limitazioni della funzione (logaritmi, equazioni fratte, radici, etc).
+
+Parliamo ora di {\bf codominio}. Il codominio \'e l'insieme di valori che la funzione produce.
+
+\subsection{Incontro con gli assi}
+
+Questa caratteristica \'e una delle pi\'u generiche eppur interessanti: si tratta semplicemente di vedere in quali punti
+la nostra $f$ incontra l'asse delle $x$ (detti 'zeri') e l'asse delle $y$ (che non hanno nome che io sappia: li chiameremo
+{\em antizeri}). La seconda \'e facilissima, mentre la prima \'e pi\'u complicata. Vediamo, ricordandoci che l'asse $x$
+ha come equazione $y=0$ (disegnare per credere!) e viceversa l'asse $y$ ha $x=0$:
+
+\begin{equation}
+zeri: \bigg\{
+	\begin{array}{l}
+	  y=f(x); \\
+ 	  y=0; 
+	\end{array}
+\hspace{10pt} anti-zeri: \bigg\{
+	\begin{array}{l}
+	  y=f(x); \\
+ 	  x=0; 
+	\end{array}
+\end{equation}
+
+Nel primo caso otteniamo l'equazione $f(x)=0$, che pone la domanda '{\em Per quali $x$ otteniamo un valore nullo?}':
+non necessariamente la soluzione c'\'e, n\'e se c'\'e \'e unica. Esempio 1: $f=x^2+42$ non si annulla mai
+(se $x \in \mathbf{R}$), quindi non ha zeri; esempio 2: $f=x^2-81$ ha due zeri, poich\'e si annulla sia per $x=9$
+(lo zero pi\'u famoso) che per $x=-9$ (lo zero che amo chiamare '{\em forse non tutti sanno che}', anche qui provare
+per credere). Purtroppo non sempre \'e facile ottenere gli zeri di una funzione; un modo per risolvere il problema
+\'e quello di invertire la funzione (vedi \ref{funzioneinversa}), ma non aspettatevi di trovare in genere TUTTE le soluzioni. :(
+
+Tutto ci\'o che si pu\'o dire \'e che si ottiene una relazione nella forma $h(x)=0$, dove non sempre \'e facile
+estrapolare le $x$ per cui $h$ si azzera. Non saprei darvi dei trucchi, poich\'e la soluzione va vista caso per caso;
+se la funzione \'e facile, la soluzione \'e facile; se \'e media, la soluzione di solito \'e abbastanza facile (per
+esempio: $f=\frac{sin(x)}{x}$); se \'e molto difficile, la soluzione \'e ancora pi\'u vantaggiosa: nemmeno il vostro
+prof la saprebbe risolvere e quindi di certo non ve lo chiede. Come vedete, in ogni caso ce l'abbiamo fatta.
+
+\esempio{La funzione 'sommatre' incontra l'asse delle $x$ nel punto $-3$.}
+
+Il secondo caso \'e talmente facile (non sto scherzando) che la maggior parte degli studenti ci si perde (secondo
+il motto 'pi\'u la soluzione \'e vicina pi\'u \'e difficile da vedere'). Esso pone la domanda: '{\em Per quali
+$y$ la $x$ vale zero?}' Ma attenzione: noi abbiamo una funzione 'esplicitata' per dirci a quale $x$ corrisponde
+quale $y$. E' in generale difficile dire quali $x$ producono $0$ (ad esempio), ma \'e facilissimo dire quale
+$y$ \'e prodotta da $0$!!! Quindi, \'e sufficiente mettere $0$ nella scatola magica e vedere cosa viene fuori;
+qui abbiamo la certezza che il risultato sar\'a esistente (purch\'e la $x$ data appartenga al dominio) e unico.
+
+\em{Nota}. Molto spesso alle superiori o in esami universitari \'e richiesto il famigerato 'Studio di funzione'. Chiedere a uno studente di prepararsi
+a casa per poter sostenere a un esame uno studio di funzione \'e un po' come chiedere a un cuoco di prepararsi a casa a fare piatti per poi
+alla prova finale saper realizzare un piatto su richiesta: ci si pu\'o preparare su tante cose diverse ma alla fine ogni funzione ha caratteristiche
+rilevanti che la rendono unica. Per alcune, ad esempio, \'e importantissimo calcolare l'asintoto, eppure la maggior parte delle funzioni non ha asintoti! 
+Esse possono avere poli, zeri, assi o poli di simmetria, e via dicendo.
+
+\label{massimiminimi}
+\subsection{Massimi e minimi}
+
+Un'altra cosa importantissima per qualunque funzione sono i punti in cui questa smette di crescere cominciando a scendere,
+e viceversa. Purtroppo per fare questo tipo di studio occorre conoscere derivate (\refpagref{derivate}) e limiti (\refpagref{limiti}):
+rimando fortemente a questi capitoli prima di procedere con la lettura. 
+
+Dando ora per scontato che sappiate derivare meglio che allacciarvi le scarpe, dir\'o qualche cosa sulla connessione
+tra derivate e massimi (o minimi, che \'e la stessa cosa\footnote{Ai matematici piace parlare cos\'i: se Dio vi d\'a
+in mano il modo di tirar fuori un massimo da ogni funzione, non avete bisogno d'altro: per il minimo basta studiare la
+funzione '$-f(x)$': meditare, gente.}: quando in una funzione si azzera la derivata \'e {\em molto} probabile che sia un
+punto di massimo ($49.5\%$) o minimo ($49.5\%$), ma pu\'o essere anche nessuno dei due ($1\%$). Per saperlo con esattezza,
+occorre ispezionare meglio la funzione con le derivate successive; il modo esatto se ben ricordo \'e (e lo percorreremo
+con un esempio):
+
+\begin{enumerate}
+	\item Prendere la funzione. {\em Ad esempio $f(x)=x^4+2x^3+4$ }
+	\item Derivarla e calcolare gli zeri (chiameremo questi valori {\em estremanti}); {\em $f'(x)=4x^3+6x^2$ nell'esempio vien fuori $x_1=0;x_1=0;x_2=-frac{3}{2}$}
+		\footnote{Scusate la pignoleria: abbiam detto che la molteplicit\'a degli zeri \'e importante, quindi ve lo rimarco; ma il punto \'e sempre uno e uno solo,
+		quindi diamogli un nome solo, no?}
+		.
+	\item Calcolare la derivata seconda e vedere quanto vale $f''$ per ciascuno degli estremanti: $h_i=f''(x_i)$. {\em $f''(x)=12(x^2+x)$; $f''(x_1)=0$; $f''(x_2)=9$.}
+ 	\item Per tutti gli estremanti con derivata seconda non nulla, siamo a posto: $f''(x_i)>0$ implica che l'estremante $x_i$ \'e effettivamente un {\em minimo}, mentre
+	 	se la derivata \'e minore di zero lo lascio alla vostra immaginazione. Se la derivata \'e nulla \'e un grosso guaio (quell'$1\%$ di cui vi parlavo).
+		In tal caso occorre procedere con le derivate successive.\footnote{Trucchetto che uso io per ricordarmi a memoria che $f''>0$ \'e minimo e $f''<0$ \'e massimo:
+		prendo la funzione $f(x)=x^2$. E' una parabola che conosco a memoria: ha il culetto nell'oriegine e si protende verso l'alto quindi in $(0;0)$ ha un minimo.
+		La derivata prima \'e $2x$ (che ci d\'a ovviamente $x=0$) e derivata seconda $f''=2$ che \'e sempre positiva. Dunque positivo $\Longleftrightarrow$ minimo.
+		Spero vi aiuti, ma ora che la scrivo non so quanto sia mnemonica...}
+	\item (Caso sfortunato) Per ogni estremante che ha derivata seconda nulla, esso pu\'o essere: flesso ($98\%$), massimo ($1\%$) o minimo ($1\%$). Cosa vuol dire flesso?
+		Vuol dire che se tagliate la funzione nelle parti sinistra e destra e date i grafici delle due met\'a a due passanti a caso (possibilmente laureati in matematica),
+		uno dei due vi dir\'a che l'avete tagliato intorno a un minimo, l'altro vi dir\'a che l'avete tagliato intorno a un massimo. Per vedere cosa sia, dovete fare la derivata
+		terza (tranquilli, se siete sfortunati abbastanza potreste dover andare avanti fino alla derivata centesima). Se \'e non nulla, \'e un flesso e siamo a posto. Se \'e nulla,
+		ricominciamo daccapo con la derivata quarta; se non \'e nulla abbiamo massimo o minimo (esattamente come con la derivata seconda); se \'e nulla avanti con la quinta:
+		si ripete il caso sfortunato in cui per\'o dovete sommare due agli ordini delle derivate. {\em $f'''(x_1)=24x_1=0$: non \'e un flesso, purtroppo, quindi si va avanti
+		con $f''''(x)=24$. Eccoci alla fine del calvario: il punto $(0;4)$ \'e un minimo. Nella mia vita mi \'e capitato una volta un caso come questo, e u altro centinaio
+		di volte di potermi fermare alla derivata seconda. Ma dovevo prepararvi al meglio no? Spero di non aver generato confusione.}
+\end{enumerate}
+
+\subsubsection{Limiti notevoli}
+Se dovete stuudiare una funzione che non \'e definita in un punto (come $\frac{1}{x+1}$) o non \'e definita {\em a partire} da un certo punto (ad esempio $log(x)$) \'e opportuno
+che vi calcoliate il limite della funzione nel punto d'interesse; nel primo caso, \'e il punto 'fuori dominio' (nell'esempio $-1$): , nel secondo \'e il primo punto (da sinistra o destra) fuori dominio (nell'esempio $0$).
+% \subsubsection{curvatura}
+% In rarissimi casi, potrebbe servirvi il raggio di curvatura
+
+\subsection{Aree e integrali}
+A volte vi si potrebbe chiedere di calcolare una l'area di una porzione di piano che abbia vagamente a che fare col vostro grafico. In tal caso, l'integrale della funzione
+(se non lo sapete calcolare, andatevelo a studiare a \refpagref{integrali}) pu\'o tornarvi molto utile. L'unica cosa da sapere \'e che, se $f(x)$ \'e la vostra funzione
+e $F(x)$ \'e una sua primitiva, vale la relazione:
+ \begin{equation}
+  A_R=F(b)-F(a) \bigg( = \int_a^b f(\xi)d\xi \bigg),
+ \end{equation}
+dove $A_R$ \'e l'area del rettangoloide delimitato dai seguenti 4 punti: $A \equiv (a;0)$, $B \equiv (b;0)$, $C \equiv (b;f(b))$, $D \equiv (a;f(a))$. Si chiama rettangoloide
+poich\'e ha 3 lati belli dritti pi\'u uno completamente curvo; esso \'e l'area del luogo dei punti che stanno {\em in verticale} tra $0$ e $f(x)$ nel percorso orizzontale che
+va da $a$ a $b$. 
+\footnote{In realt\'a questo non \'e corretto: l'integrale \'e talmente bravo che conta le aree come negative se $f$ va sotto l'asse delle $x$, e positive altrimenti. 
+Con ci\'o potreste anche ritrovarvi (e succede spesso, fidatevi) con l'area di due triangoloni - uno sotto l'altro sopra l'asse $x$ - che ammonta a zero! Per evitare questi
+errori, dovete spezzare l'integrale in pi\'u pezzi, anzich\'e su $[a,b]$, su $[a,x_1],[x_1,x2],...,[x_n,b]$, dove i vari $x_i$ sono i punti in cui la funzione si annulla, e prendere di ogni area il valore assoluto.}
+
+
+
+\section{Altro sulle funzioni}
+
+In questa sezione verranno descritte caratteristiche interessanti sulle funzioni che non potevano essere messe nei capitoli precedenti.
+
+\subsection{Relazioni}
+
+E' brutto definire una funzione senza aver definito una relazione, poich\'e quest'ultima nasce concettualmente prima. Vediamolo con un esempio:
+\begin{equation}
+x^2+y^3-2xy=0
+\end{equation}
+Questa equazione definisce un insieme di punti del piano (coppie $(x;y)$). In particolare un punto $P(x_0;y_0)$ appartiene a questa curva se e solo se, mettendo i numerini $x_0$ e $y_0$ nella parte sinistra dell'equazione viene fuori $0$! Esempio: $(0;0)$ fa parte della equazione, mentre $(7,6)$ non appartiene (provare per credere: $49+216-84$ non fa $0$, purtroppo)
+
+\subsection{Funzioni inverse} \label{funzioniinverse}
+
+Data una qualunque funzione $f$, la funzione inversa $g$ di una funzione $f$ \'e una funzione ad essa 'complementare' che ha il seguente scopo: se $f$ mangia $x$ e sputa $y$, $g$ dev'essere in grado di mangiare quella $y$ e sputare di nuovo $x$. Vi assicuro che questo non \'e un compito facile, e infatti invertire una funzione non sempre \'e possibile. Vediamo alcune funzioni:
+
+\begin{equation}
+f_1: y=x+3; \hspace{5pt} 
+f_2: y=41; \hspace{5pt} 
+f_3: y=x^2+1; \hspace{5pt} 
+f_4: y=2x;  \hspace{5pt} 
+f_5: y=\frac{9}{5}x+32; 
+\end{equation}
+
+Diamo intanto un nome alle quattro funzioni per poterne parlare meglio: nell'ordine le chiameremo 'sommatr\'e', 'quarantuno', 'Pippo', 'doppiodi'
+e 'c2f'\footnote{La quinta \'e un tipico caso di funzione che ha un'utilit\'a nella vita vera, ma voglio lasciare un'aura di mistero su di essa
+e sul perch\'e del nome}. Vediamo: 'doppiodi(8)=16', hmmm... s\'i, direi che torna. A dir il vero avrei potuto chiamare 'Pippo' col nome 'unopiuquadratodi':
+ho scelto Pippo cos\'i quando vi troverete a un esame a studiare $f=\frac{e^{x+3}+1}{x^3+\log(x)}$ non vi sentirete costretti a terminare l'inchiostro con
+'segnodifrazioneconalnumeratoreesponenzialediicspi\'utreiltuttopi\'uunoealdenomminatorexallatrepi\'ulog\'ics' e potrete usare un simpatico 'Luisa'.
+
+Il modo pi\'u facile per trovare la funzione inversa \'e non ragionarci (se no saremmo uomini, e non macchine), fare un'operazione che in matematica non
+ha pari quanto a inutilit\'a ma che aiuta l'uomo per i secoli di preconcetti sui simboli: invertire il simbolo $x$ col simbolo $y$. \footnote{E se non
+credete a quanto vi ho detto ditemi che figura geometrica corrisponde all'equazione $y=ax^2+bx+c$ e quale a $b=xa^2+ya+z$... eheheeh.}. 
+
+\begin{equation}
+g_1: x=y+3; \hspace{10pt} 
+g_2: x=41; \hspace{10pt} 
+g_3: x=y^2+1; \hspace{10pt} 
+g_4: x=2y; \hspace{10pt} 
+g_5: x=\frac{9}{5}y+32; 
+\end{equation}
+
+
+Chiamiamo pseudoinversa la schifezza che viene fuori (dico schifezza poich\'e non necessariamente viene fuori una funzione) ricavando la nuova $y$
+(che era la vecchia $x$) in funzione di $x$ (la vecchia $y$). Portiamo come si suol dire 'a sinistra' la $y$:
+
+\begin{equation}
+g_1: y=x-3; \hspace{10pt} 
+g_2: y=?!?; \hspace{10pt} 
+g_3: y=\pm \sqrt{x-1}; \\
+g_4: y=\frac{x}{2}; 
+g_5: y=\frac{5}{9}(x-32); 
+\end{equation}
+
+Ehi, ma che succede? La funzione $g_2$ non ha una $y$: come la porto a sinistra?!?!? E $g_3$? Non mi piace mica tanto: prima per ogni $x$ veniva
+fuori qualcosa, ora invece per alcune $x$ ha un valore doppio, per altre non ha proprio valore! Che casino!
+
+Ebbene, questo \'e ci\'o che vien fuori a usare la matematica col 'pilota automatico'. Vediamo di ragionare su ogni funzione. Vediamo intanto
+le funzioni 'ben educate': $g_1$ \'e diventata la funzione 'sottraitre', $g_4$ \'e 'met\'adi' e $g_5$ la chiamo $f2c$ (\em{soddiabbolico}, lo so).
+
+Perch\'e $g_2$ e $g_3$ non si comportano bene? La definizione di funzione era semplice: per ogni cosa che mangi devi sparare fuori {\em uno ed
+un solo valore} e sempre lui. Se $f_2$ sputa fuori $41$ qualunque cosa le si dia in bocca, allora $g_2$ dovr\'a per forza fare una dieta a base di
+$41$, per sua stessa definizione: queso vuol dire che $g_2$ avr\'a come dominio il solo numero $41$ (in matematichese si scrive $\mathcal{D}=\{41\}$)
+e come codominio tutto $\mathbf{R}$. Ma questo \'e impossibile, e lo si vede dal fatto che se il vostro cuginetto vi chiede quanto vale $g_2(41)$,
+voi non potrete rispondergli se non in maniera zen: essa vale tutto e niente. Tra gl'infiniti punti che $g_2$ tocca, se vogliamo renderla una {\em funzione},
+dobbiamo sceglierne uno solo. Propongo $5040$, dato che ha un valore affettivo per me. Ecco dunque che $g_2$, definita come $g_2(x)=5040,x \in \{41\}$, \'e
+ora una funzione. Se vi divertite a re-invertirla non otterrete $f_2$, come potreste aspettarvi, ma otterrete qualcosa di vagamente simile: ovvero una
+restrizione di $f_2$ ad un dominio che le consenta di essere invertibile (ovvero la sola $x=5040$).
+
+Veniamo ora a $g_3$ che, essendo pi\'u difficile da calcolare, \'e paradossalmente molto pi\'u facile da capire \footnote{Se non ci credete,
+chiedete a uno studente universitario di disegnarvi la funzione $sin(x)$ e la funzione $5$: di solito avr\'a meno problemi a disegnare la prima!
+Oppure vi chieder\'a se non vi siete sbagliati a scrivere la seconda!}. Siamo d'accordo che non ha valori per $x<1$. Dunque il dominio di $g_3$ \'e
+$\mathcal{D_3}=\{x | x \ge 1\}$. Altro problema \'e quello del '$\pm$': \'e necessario infatti battezzare uno dei due, e per farvi capire che
+nessuna scelta ha una dignit\'a rispetto all'altra lancer\'a un dado: 1,2,3: pi\'u, 4,5,6: meno. E' uscito 6, quindi scelgo meno. Ecco dunque che
+$g_3 \doteq -\sqrt{x-1}$ (con $x \in \mathcal{D_3}$) \'e una funzione inversa di $f_3$.
+
+Cosa abbiamo imparato? Che invertire una funzione $f$ \'e fattibile solo se prima si restringe il dominio di $f$ (a propria scelta) in modo che
+essa sia iniettiva (ad ogni elemento e' associato al piu' un elemento del codominio) e suriettiva (ogni elemento del codominio e' coperto).
+
+\subsection{Funzioni di pi\'u variabili}
+
+Le funzioni di cui abbiam parlato finora sono le funzioni di singola variabile. Esse sono le pi\'u interessanti poich\'e si parte da esse per
+studiare le altre. Sappiate per\'o che esistono anche funzioni di pi\'u variabili, come ad esempio:
+
+\begin{equation}
+ f(x,y) \doteq x^2+3y^2-8
+\end{equation}
+
+Esse sono, in generale, funzioni che hanno bisogno di mangiare pi\'u variabili per sputarne fuori {\em una sola}. La pi\'u famosa credo sia
+$f(x,y) \doteq x+y$ che in Italia e in altre nazioni viene chiamata {\em somma}, ma essa ha la stessa dignit\'a di $x-y$ (differenza), $x/y$
+(rapporto), $x^2+y^2-1$ (circonferenza goniometrica) e $e^{x^2+y^2}$ (collinetta di Gauss). Sinceramente, l'ultima \'e quella che preferisco.
+Da notare che in generale $f(x,y) \neq f(x,y)$, e lo potete notare dalla funzione differenza. Poco importa se in quasi tutti i miei esempi ci\'o
+vale: chiamatela coincidenza; in realt\'a l'uomo fa fatica a sparare cose {\em davvero} a caso, pure quando ci si impegna. Davvero. 
+
+\subsection{Funzioni composte}
+
+Le funzioni composte sono funzioni di funzioni. Se $f$ e $g$ sono due funzioni e c'\'e compatibilit\'a tra il codominio di $g$ e il dominio di $f$,
+allora definiamo $h \doteq f \circ g$ come quella funzione che associa a ogni $x$ il valore $f(g(x))$. Perch\'e c'\'e un problema di dominio?
+E' un semplicissimo problema di dieta: se $g$ \'e onnivoro e sputa fuori di tutto, mentre $f$ \'e vegetariana esister\'a probabilmente una $x$
+che $g$ trasforma in carne, e $f$ non pu\'o mangiarla. L'unico modo \'e restringere il dominio di $g$ a quelle sole $x$ che - trasformate in
+$y$ da $g$ - non possano essere indigeste per $f$. Il vincolo, in matematichese \'e che $\mathcal{Y}_g \in \mathcal{X}_f$. I domini non devono
+coincidere: non c'\'e alcun problema, infatti, se $f$ \'e onnivoro ma $g$ gli passa soltanto verdure.
+
+Molti miei conoscenti fanno confusione con le funzioni composte. Vediamo di fare qualche esempio, definendo alcune funzioni e chiamandole per
+nome (rispettivamente 'sommauno','cinque','Pippo','raddoppia'):
+
+\begin{equation}
+ \begin{array}{lr}
+f_1: y=x+1; \hspace{5pt} &	% sommauno
+f_2: y=5; \hspace{5pt} \\		% cinque
+f_3: y=x^2+1; \hspace{5pt} &	% pippo
+f_4: y=2x;  \hspace{5pt} 	% raddoppia
+ \end{array}
+\end{equation}
+
+Proviamo a giocherellare con le 16 combinazioni possibili, vi va?
+\begin{equation}
+ \begin{array}{rcll}
+f_1(f_1) & = & sommauno(sommauno(x))=x+2; & (sommadue) \\
+f_1(f_2) & = & sommauno(cinque(x))=6; & (sei) \\
+f_1(f_3) & = & sommauno(Pippo(x))=x^2+2; & (Pluto) \\
+f_1(f_4) & = & sommauno(raddoppia(x))=2x+1; & (unopiudoppiodi)\\
+f_2(f_1) & = & cinque(sommauno(x))=5; & (cinque)\\
+f_2(f_2) & = & cinque(cinque(x))=5; & (cinque)\\
+f_2(f_3) & = & cinque(Pippo(x))=5; & (cinque)\\
+f_2(f_4) & = & cinque(raddoppia(x))=5; & (cinque)\\
+f_3(f_1) & = & Pippo(sommauno(x))=x^2+2x+2; & (Paperino)\\
+f_3(f_2) & = & Pippo(cinque(x))=26; &	(ventisei)\\
+f_3(f_3) & = & Pippo(Pippo(x))=x^4+2x^2+2; &(Paperone)\\
+f_3(f_4) & = & Pippo(raddoppia(x))=4x^2+1; &(Minny)\\
+f_4(f_1) & = & raddoppia(sommauno(x))=2x+2; &(duepiudoppiodi)\\
+f_4(f_2) & = & raddoppia(cinque(x))=10;& (dieci)\\
+f_4(f_3) & = & raddoppia(Pippo(x))=2x^2+2;& (Qui)\\
+f_4(f_4) & = & raddoppia(raddoppia(x))=4x;& (quadruplica)
+ \end{array}
+\end{equation}
+
+Secondo il solito famoso 'principio inverso della semplicit\'a', la funzione 'cinque' \'e quella pi\'u dispotica e pi\'u difficile da usare. Notate che la
+funzione meno intuitiva, Pippo, \'e quella responsabile della nascita di un'intera famiglia di funzioni non intuitive (che ho chiamato in modo simile a lui).
+Molte persone confondono la 'composizione' di funzioni con il prodotto; non poche volte ho visto porre $f_1(f_1(x))=(x+1)^2$. Se date un nome alle funzioni
+come faccio io, questi errori  dovrebbero capitarvi di rado. {\em Si noti che in generale $f \circ g \neq g \circ f$}.
+
+\begin{esercizio}
+Cosa risulta dalla composizione delle funzioni 'sommauno' ($x+1$) e 'togliuno' ($x-1$)? E dalla composizione di 'raddoppia' ($2x$) e 'dimezza' ($\frac{1}{2}$)?
+Qual \'e l'elemento neutro della composizione?
+\end{esercizio}

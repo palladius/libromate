@@ -1,0 +1,298 @@
+\label{derivate}
+\chapter{Derivate}
+
+Questo capitolo tenter\'a di spiegare il concetto di derivata che \'e tanto importante per tutta l'analisi matematica.
+Esso esige come prerequisito una buona conoscenza delle funzioni come concetto e delle funzioni notevoli.
+
+\section{Cos' \egrave una derivata}
+
+La derivata \'e una specie di 'lastra' della vostra funzione: \'e un aiuto che vi consente di comprendere meglio la
+funzione che state studiando. Buffamente, \'e essa stessa una funzione; mentre la vostra $f(x)$ \'e qualcosa che associa
+ad ogni $x$ una $y$ che voi - o il vostro prof - ritenete interessante in quanto tale, la derivata (che chiameremo $f'$)
+fornisce invece una ulteriore informazione su $f$ stessa: non tanto il valore di $f$ nel punto (per questa informazione
+basta $f$!!!) quanto la sua {\em variazione} l\'a intorno a $x$. Ma facciamo un passo indietro.
+
+
+%Definizione ANDAZZO
+\label{andazzo}
+\begin{definizione}[Andazzo] Definiamo \bf{andazzo} di una funzione la pendenza media che ha una curva $f(x)$ sull'intervallo 
+      $[a,b]$ (possibilmente continua sull'intervallo stesso); poich\'e l'ho inventato io, lo definir\'a in maniera pignola; esso
+      \'e un operatore che accetta in ingresso una funzione $f$ e due numeri $a;b \in \mathcal{D}_f$: $\mathcal{A}nd[f(x);a;b] \doteq \frac{f(b)-f(a)}{b-a}$.
+      Per comodit\'a assumeremo $b>a$. Il suo significato pratico \'e di dire quant'\'e
+       l'andamento medio di una funzione su un certo intervallo.
+\end{definizione}
+
+Vediamo di sfruttare questa definizione per qualche uso pratico. Supponiamo che abbiate investito il vostro danaro (diciamo $10$ \EUR).
+A gennaio investite quei $10$ e nei mesi successivi mi trovate i seguenti soldi: $(10,11,10,9,9,10,9,12,13,14,11,11)$. Come potete notare,
+a gennaio dell'anno dopo avete guadagnato soltanto $1$ \EUR, mentre qualche mese prima vi eravate illusi di guadagnare ben di pi\'u. Prima di
+parlare di derivate, vediamo una cosa: quanto vale $f$? Ci\'o \'e tutt'altro che banale. Poich\'e vi ho dato soltanto 12 punti, la cosa pi\'u
+corretta da dire \'e che $f$ ha come dominio $12$ punti ($= \{1,2,3,\cdot,12\}$) e come codominio i valori dati. Un altro approccio \'e di dire
+che la funzione \'e definita per tutti i giorni dell'anno, o addirittura per tutti i minuti dell'anno (basta vedere l'andamento di borsa dei
+vostri soldi minuto per minuto), ma di tutti questi valori son noti solo i dodici valori mensili. In generale, qualunque sia $f$, pensiamo
+che $f$ passi per dodici punti noti: $(1;10),(2;11),(3;10),\cdots,(12,11)$. Ai matematici questa definizione puntiforme di solito piace poco.
+Esistono infinite funzioni passanti per quesi dodici punti, ma una delle pi\'u semplici \'e sicuramente (senza usare i $sinc$, per chi li
+conosce) il polinomio di grado $12$ che passi per quei punti, che chiameremo $P(x)$.
+
+Ora vediamo di rispondere a qualche domanda: qual \'e stato l'andamento del nostro titolo su base annua? Qual \'e stato l'andamento del
+nostro titolo su tutto il primo mese? E su tutto l'ultimo mese? E quale l'andamento alle 14:30 ddell'8 Agosto? Per rispondere alle prime
+tre domande \'e sufficiente la definizione di andazzo, per l'ultima \'e opportuna la definizione di derivata; ma dato che gli esempi
+pratici sono molto difficili da usare in matematica, torneremo a un esempio assolutamente poco veritiero, innaturale e incomprensibile,
+ma la cui derivata sia facile da calcolare :).
+
+Supponiamo che il vostro conto in banca valga $x(t)=2t^2+3t+10$ \footnote{Non spaventatevi: qui la variabile \'e il tempo mentre la
+vostra $f$ ora si chiama $x$.
+Scusate, ma \'e corretto pure cos\'i e dovrete pure abituarvi no? D'ora in poi $f$ si chiama 'ics' e $x$ si chiama 't'. Lo so, sono cattivo!}.
+All'istante zero ($t_0$), in cui depositate i soldi, depositate 10 (per comodit\'a pensiamo che siano migliaia di euro, ma potrebbero essere
+anche dollari altairiani). Per non rischiare di dire qualcosa di sensato, diciamo che l'unit\'a di $t$ sia il secondo; tanto per capirci,
+dopo 10 secondi che avete depositato i vostri soldi avrete gi\'a maturato da $10$ di partenza $240$ mila euro. Spero ci\'o vi persuada che
+siamo in un mondo diverso da quello reale.
+
+Poniamoci un paio di domande, e per ciascuna di esse chiediamoci di che strumenti abbiamo bisogno per rispondere. 
+
+{\em (1) Quanti soldi avremo tra un minuto? (2) Tra quanto tempo avremo 1000 soldi (una specie del nostro 'primo miliardo')? (3) Tra quanto
+tempo raddoppieremo i nostri soldi? (4) Quant'\'e l'andamento del mio conto nei primi dieci minuti? (5) Ma \'e conveniente investire in questa banca?
+Se s\'i, quando lo \'e e quando no?}
+
+Mettiamoci con carta e penna a risolvere le domande.
+
+(1) Abbiamo $x(t)$, ed \'e pi\'u che sufficiente a rispondere; anzi direi che \'e nata proprio per lo scopo:
+"Quanti soldi abbiamo al tempo $t$?". La risposta \'e $x(60)=7200+180+10=7390$. Tantini, direi...
+
+(2) Qua dovremmo usare la funzione inversa: \'e il tempo $t_0$ in cui $x(t_0)=1000$. Calcoliamolo:
+$1000=2t_o^2+3t+10 \longrightarrow t_0=\frac{-3 \pm \sqrt{3^2-4 \cdot 2 \cdot (-990)}}{4}$. Delle due soluzioni,
+entrambe sensate, prenderei quella positiva dato che per tempi minori di zero abbiamo l'imbarazzo di avere un conto
+altissimo in banca senza ancora aver depositato nulla: prodigi della matematica! Queste cose capitano spesso quando
+crcate di modellare la realt\'a con dei numeri; i numeri vi aiutano in tanti casi, ma spesso sono 'stupidi' e non
+danno per scontato quello che {\em voi} date per scontato. Io vi ho avvisati...
+
+(3) Questa domanda \'e una tipica domanda in cui buttate i dati in ua equazione e sperate che venga fuori qualcosa
+di sensato. Ci chiediamo il tempo $t_1$ in cui i nostri $10$ son diventati $20$, ovvero il tempo in cui semplicemente
+noi avremo $20$, no? Ecco qua: $20=2t_1^2+3t_1+10$. Anche qui vengono fuori due soluzioni, di cui vi consiglio la positiva.
+Non c'interessa calcolarla, solo capire che c'\'e e che significato ha... 
+
+(4) Cos'\'e l'andamento? E' l'aumento (o diminuzione) del nostro capitale in un certo lasso di tempo. Il valore medio
+   \'e quindi $\frac{\Delta x}{\Delta t}$. Ma allora la definizione di andazzo (\defpagdef{andazzo}) capita a puntino!
+   Proviamo: $\mathcal{A}nd[x(t);0;600]=\frac{x(600)-x(0)}{600-0} = \frac{2\cdot600^2+3\cdot600+10-10}{600}=600\frac{2\cdot600+3}{1} = 600\cdot1203 = 721800$.
+   E senza calcolatrice! Qual \'e il significato pratico della risposta? Che mediamente sui primi 10 minuti si pu\'o dire che guadagniamo una media di $721800$ \EUR
+   al secondo. E infatti, se moltiplichiamo per $10'$ otteniamo proprio la nostra differenza di capitale tra ora e $10'$ da ora. E' importante notare due cose: primo,
+   l'andazzo \'e diverso per intervalli diversi ma di stessa durata (se non ci credete calcolate l'andazzo tra $10'$ e $20'$, scommetto che sar\'a molto pi\'u grande);
+   secondo, questo \'e un valore medio che 'smussa' i valori locali in favore di uno studio 'globale'\footnote{Se nel bel mezzo dell'intervallo perdiamo tutto,
+   e dopo qualche tempo riguadagnamo tutto l'operatore $\andazzo$ non se ne accorgerebbe: \'e in virt\'u di questa pecca che i matematici hanno inventato la derivata}.
+
+(5) Vediamo di riformulare la domanda: in quali istanti i soldi crescono e in quali i soldi calano? Se potessi calcolare questa cosa, potrei andare in banca appena
+  prima di ogni ribasso e riportarglieli quando tornan su!!! Sarebbe una previsione molto interessante, no? Una errore comune \'e confondere la crescita dei soldi
+  col segno della funzione. Questo \'e sbagliatissimo. Il segno di $x(t)$ ci dice se siamo in attivo o in passivo. Ma la crescita o la decrescita del denaro ci \'e
+  dato dalla derivata, che quindi ci dice quanto ci dobbiamo aspettare che cambi il nostro patrimonio nei brevissimi istanti successivi. Perch\'e brevissimi? Vediamolo
+  con la definizione.
+
+\begin{definizione}[Derivata]
+Sia data una funzione $f(x)$ continua sull'intervallo $[a;b]$. Sia $x_0$ un punto {\em interno} a tale intervallo ($x_0 \in ]a;b[$). Definiamo la derivata di $f$ nel punto $x_0$ come il valore:
+ \begin{equation}
+  \lim_{x \rightarrow x_0} \andazzo[f;x_0;x] \doteq f'(x_0)
+ \end{equation}
+ Poich\'e molti veterani potrebbero essere schifati dal mio operatore fatto in casa (l'Andazzo) vi do ua definizione che non lo usa:
+ \begin{equation}
+  \lim_{x \rightarrow x_0} \frac{f(x)-f(x_0)}{x-x_0} \doteq f'(x_0)
+ \end{equation}
+ Notiamo intanto che la derivata non sembra essere una funzione, ma un semplice numero. Tranquilli, non vi ho ingannato.
+ In realt\'a, per ogni $x_0$ su cui \'e definita $f$ \'e definita anche $f'$: potremmo definire la {\em funzione} derivata
+ come la funzione che segue, punto per punto, i valori dati dalla definizione. Attenzione, per\'o! La derivata non \'e necessariamente
+ calcolabile su ogni punto su cui \'e definita $f$: su ogni punto deve esserci abbastanza spazio sia a sinistra che a destra
+ affinch\'e il limite possa essere calcolato\footnote{Questo ha a che fare con i cosiddetti {\em punti di accumulazione}, di
+ cui non  parler\'o. In generale, \'e sufficiente che esista un insieme $[a,b]$ compatto che racchiuda il punto $x_0$ affinch\'e
+ il limite sia calcolabile.}. Un modo spesso pi\'u facile per definire la derivata \'e quella di non dire: "limite per $x$ che
+ tende a $x_0$" ma di dire: "limite per $x=x_0+h$ con $h$ che tende a $0$". Se ci pensate non cambia assolutamente nulla, ma i
+ calcoli son spesso pi\'u semplici; in tal caso, abbiamo ottenuto non pi\'u $f'(x_0)$ ma gi\'a $f'(x)$:
+ \begin{equation}
+  \lim_{h \rightarrow 0} \frac{f(x+h)-f(x)}{h} \doteq f'(x)
+ \end{equation}
+ Il significato fisico pi\'u semplice (e che non dovrete mai dimenticare) della derivata \'e: $f'(x_0)$ \'e sempre il valore
+ della {\em pendenza } della retta tangente a $f$ nel punto $x_0$.
+\end{definizione}
+
+La derivata \'e, per nostra fortuna, sempre facile da calcolare (ci\'o non vale, ad esempio per gli integrali). Per ogni funzione 'notevole',
+esiste una funzione che di essa \'e la derivata. vediamo di ricavarne alcune; delle rimanenti daremo semplicemente la ricetta gi\'a fatta.
+
+\begin{esercizio}
+Calcolare la derivata di $x(t)=2t^2+3t+10$, che chiameremo $x'(t)$.
+\begin{eqnarray}[rcl]
+ x'(t) & = & \lim_{t \longrightarrow h} \frac{f(t+h)-f(t)}{h} =\
+       & = & \lim \frac{(2(t+h)^2+3(t+h)+10)-(2t^2+3t+10)}{h} =\
+       & = & \lim \frac{2t^2+4ht+2h^2+3t+3h+10-2t^2-3t-10}{h}=\
+       & = & \lim \frac{4ht+2h^2+3h}{h}=\
+       & = & \lim \frac{(h)(3+4t+2h)}{h}=\
+       & = & \lim 3+4t+2h=\
+       & = & 3+4t.
+\end{eqnarray}
+Semplice, no? Notate che le parti che non contenevano $h$ si sono elise a vicenda (riflettete un attimo
+sul perch\'e), le parti che la contenevano di grado $1$ (ovvero $(3+4t)h$) sono rimaste fino alla fine,
+mentre le parti che la contenevano di grado $2$ sono state elise in quanto infinitesimi di ordine superiore.
+\end{esercizio}
+
+Ora possiamo finalmente rispondere alla domanda (5): quanto \'e stiamo guadagnando in un certo momento?
+Nel momento in cui versiamo i soldi (tempo $0$), il nostro patrimonio \'e crescente. Esso vale $f'(0)=3$.
+Questo vuol dire che la pendenza della retta tangente a $f$ nel punto $0$ \'e $3$, quindi vuol dire che in
+un istante {\em piccolissimo} a sinistra e a destra dello zero noi stiamo guadagnando $3$ soldi (nell'esempio,
+$3000$ \EUR) al secondo. Attenzione! Non vuol dire come potreste pensare che tra un secondo avrete esattamente
+$3$ soldi in pi\'u\footnote{Questo perch\'e in $0$ la funzione $f'$ vale $3$, ma dopo mezzo secondo ha gi\'a
+un altro valore, e per sapere quanto avete dovete calcolare l'{\em integrale} di ques'andamento, che banalmente
+\'e la $f$ stessa.}, ma qualcosa di comunque simile: vuol dire che tra un secondo avrete {\em circa} $3$ soldi
+in pi\'u, tra $\frac{1}{1000}$ di secondo avrete circa $\frac{3}{1000}$ di soldi in pi\'u, tra $\frac{1}{1'000'000}$
+di secondo avrete circa $\frac{3}{1'000'000}$ di soldi in pi\'u, e che questi 'circa' si avvicinano a realt\'a
+tanto pi\'u quanto pi\'u il tempo diventa piccolo. Vi sembra poco? Se s\'i, vi sbagliate di grosso.
+
+\begin{esercizio}
+Calcolare la derivata di $f(x)=x^n$ (con $n \in \insieme{N}^+$).
+
+Per risolvere questa, occorre conoscere i binomi di Newton. Per essi rimando a \refpagref{binominewton}. Vi ricordo che:
+
+\begin{equation}
+(a+b)^n=\binom{n}{0}a^n+\binom{n}{1}a^{n-1}b^1+\binom{n}{2}a^{n-2}b^2+\cdots+\binom{n}{n-1}a^1b^{n-1}+\binom{n}{n}b^n,
+\end{equation}
+Sapendo ci\'o, usiamo la definizione di derivata:
+\begin{eqnarray}
+D[x^n]  & = & \lim_{h \rightarrow 0}\frac{(x+h)^n-x^n}{h} = \
+	& = & \lim \frac{
+	(x^n+\binom{n}{1}x^{n-1}h+\binom{n}{2}x^{n-2}h^2+\cdots+h^n) - (x^n)
+	}{h} \
+	& = & \lim \frac{
+	(\binom{n}{1}x^{n-1}h+\binom{n}{2}x^{n-2}h^2+\cdots+h^n)}{h} \
+	& = & \binom{n}{1}x^{n-1}\
+	& = & nx^{n-1}
+\end{eqnarray}
+Anche qui, i termini di ordine $h^2$ o superiori sono morti, lasciandoci qualcosa di pulitissimo! La cosa pi\'u bella di questo
+risultato \'e che ora sapete derivare ogni singolo pezzo di un polinomio, quindi in pratica sapete derivare un polinomio (non \'e
+ovvio, dovete ringraziare il principio di multilinearit\'a della derivata che trovate in seguito).
+\end{esercizio}
+
+\begin{esercizio}
+Provate a calcolare la derivata di $e^x$, $\log(x)$, $\sin(x)$. Attenti perch\'e il limite \'e fattibile ma richiede una
+buona 'cultura' supplementare ;)
+\end{esercizio}
+
+\section{Derivate notevoli}
+
+\begin{tabular}{|r|l|}
+\hline
+Funzione & Derivata\
+\hline
+\hline
+$x^n$ & $nx^{n-1}$ \
+$ax^n+bx+c$ & $2ax+b^\dagger$ \
+$\frac{1}{x^n}$ & $\frac{-1}{x^{n+1}}^\dagger$ \
+$\sqrt{x}$ & $\frac{1}{2\sqrt{x}}^\dagger$ \
+$\sqrt[n]{x} (=x^{\frac{1}{n}})$ & $\frac{1}{n\sqrt[n]{x^{n-1}}}^\dagger$ \
+\hline
+$\log_a(x)$ & $\frac{\log_a(e)}{x}$ \
+$\ln(x)$ & $\frac{1}{x} ^\dagger$ \
+$\ln|x|$ & $\frac{1}{x} ^\dagger$ \
+\hline
+$\sin(x)$ & $\cos(x)$ \
+$\cos(x)$ & $-\sin(x)$ \
+$\tan(x)$ & $\frac{1}{\cos^2(x)} (=1+\tan^2(x))$ \
+\hline
+$\arcsin(x)$ & $\frac{1}{\sqrt{1-x^2}}$ \
+$\arccos(x)$ & $\frac{-1}{\sqrt{1-x^2}}$ \
+$\arctan(x)$ & $\frac{1}{x^2+1}$ \
+\hline
+$a^x$ & $a^x \ln a$ \
+$e^x$ & $e^{x \dagger}$\
+\hline
+$\sinh(x)$ & $\cosh(x)^\dagger$ \
+$\cosh(x)$ & $-\sinh(x)^\dagger$ \
+$\tanh(x)$ & $\frac{1}{\cosh^2(x)}^\dagger$ \
+\hline
+$arcsinh(x) (= ln|x + \sqrt{x^2+1}|)$ & $\frac{1}{\sqrt{1-x^2}} ^\dagger$ \
+$arccosh(x) (= ln|x \pm \sqrt{x^2-1}|)$ & $\frac{-1}{\sqrt{1-x^2}} ^\dagger$ \
+$arctanh(x) (= \frac{1}{2} ln|\frac{1+x}{1-x}|)$ & $\frac{1}{x^2-1} ^\dagger$ \
+\hline
+\end{tabular}
+
+
+{\small ($\dagger$): questa derivata pu\'o essere tranquillamente dedotta dalle altre (non \'e 'primitiva'); l'ho messa solo per comodit\'a (leggasi pigrizia) vostra.}
+
+Le derivate pi\'u stupefacenti sono senz'altro quella del logaritmo e quella dell'arcotangente..
+ricordatevene quando studierete gl'integrali selle funzioni polinomiali fratte ;)
+
+Ho notato che molta gente ha paura a derivare $\sqrt{x}$ e non dorme al pensiero di derivare $\sqrt[3]{x}$.
+Vi ricordo che la radice $n$-ma di qualcosa equivale, in campo reale, a un'esponenziazione: $\sqrt[n]{x} \equiv x^{\frac{1}{n}}$;
+ci\'o la riduce a godere delle propriet\'a di derivazione di qualsiasi polinomio!!!
+
+
+\subsection{Propriet\'a delle derivate}
+
+\subsubsection{Multilinearit\'a della derivata}
+
+$D \alpha f(x)+\beta g(x) = \alpha f'(x) + \beta g'(x)$
+
+% TODO(ricc): hey ricc piu giovane, mi sembra un po forte quest'affermazione forse togli
+Tirerei gentilmente un pugno in faccia a chi desse per scontata la relazione seguente, e amabilmente chiederei
+a queste persone di dirmi quanto vale la derivata del prodotto di due funzioni... ebbene sappiate che
+{\em non vale assolutamente} la seguente: $D f(x)g(x) = f'(x)g'(x)$. Alla faccia delle ovviet\'a.
+\subsubsection{Derivata del prodotto}
+
+$D  f(x)g(x) = f'(x)g(x) + f(x) g'(x)$
+
+\subsubsection{Derivata del rapporto}
+
+Questa \'e davvero incasinata:
+$D  \frac{f(x)}{g(x)} = \frac{f'g-g'f}{g^2}$
+
+Se mai ve la doveste dimenticare (per esempio \'e facilissimo sbagliare il segno, cosa che succede se al numeratore invertite $f$ con $g$), con un po' di tempo ve la potete ricavare, dopotutto \'e il prodotto di $f$ e $\frac{1}{g}$, e la seconda \'e la funzione composta $\frac{1}{g(x)}=[\frac{1}{x}]\circ[g(x)]$. 
+
+\subsubsection{Derivata di funzione composta}
+$D f(g(x)) = f'(g(x))g'(x)$
+
+Attenti, la precedente \'e facilissima da enunciare, ma difficile da capire e applicare. Mi piacerebbe che i pi\'u bravini di voi deducessero dalla precedente equazione la seguente: 
+
+$D \frac{f(x)}{g(x)} = \frac{f'g-g'f}{g^2}$
+
+Oltre questa, potete dedurre anche le seguenti \footnote{Dedurle da voi fa la differenza tra il ricordarle o meno al prossossimo esame:
+tutti sappiamo che al prossimo avrete i bigliettini; ma un giorno potrebbe servirvi in un esame in cui non credete che vi possa servire;
+\'e {\em l\'i} che potrebbe tornarvi utile. Sono sinceramente convinto che la matematica che non sapete a memoria sia completamente inutile
+(ma non mi darete retta poich\'e voi volete solo passare esami, non sapere le cose, e vi capisco perch\'e la pensiamo tutti cos\'i in un
+intorno sinistro dell'esame).} (potete dedurle da voi; se avete 5 minuti, investiteli nel dedurre le seguenti):
+
+$D e^{f(x)} = f' \dot e^f$
+
+$D \log^{f(x)} = \frac{f'}{f} $
+
+$D \sin^{f(x)} = f' \dot \cos(f)$
+
+$D \sqrt{f(x)} = \frac{f'}{2\sqrt{f}}$
+
+State molto attenti alla derivata del logaritmo: d'ora in poi quando troverete $\frac{2x}{x^2+42}$ vi
+dovr\'a suonare un allarme, solo cos\'i diventerete dei bravi integratori.
+
+\begin{esercizio}
+Calcolate le derivate di $\cos(f(x)),\arctan(f(x)),f(x)^x,f(x)^{g(x)}$. Attenti che le ultime due son difficilotte.
+\end{esercizio}
+
+\subsubsection{Derivata di funzione inversa}
+
+Anzitutto mettiamo in chiaro una cosa: la funzione inversa {\em non} \'e $\frac{1}{f(x)}$, come molti credono.
+E' in realt\'a la funzione che si estrare da $f$ invertendo $x$ e $y$; i grafici delle due funzioni sono speculari rispetto alla retta ($y=x$), se non ci credete guardate il grafico di $e^x$ e della sua inversa $\ln(x)$.
+
+Se io so la derivata di $sin(x)$, non sarebbe bello se potessi usare una scorciatoia per avere la derivata di $\arcsin(x)$? Ebbene, la c
+!
+
+$D f^{-1}(x) = \frac{1}{f'(y)} \bigg|_{y=f^{-1}(x)}$
+
+
+Questo non \'e affatto banale: derivate $f$ e la mettete al denominatore; ora avrete una $g(y)$ che non c'entra pi\'u nulla con $f$. Dovete fare in modo che non dipenda da $x$, $y$ o altro, ma solo da $f$, e ci\'o \'e tutt'altro che semplice. Esempio da manuale:
+
+$D \arcsin(x)= \frac{1}{cos(y)} \bigg|_{y=arcsin(x)}=\frac{1}{\sqrt{1-sin^2(arcsin(x))}}=\frac{1}{\sqrt{1-x^2}}$
+
+Antipatico, vero? Eh gi\'a. Credo meriti un minuto di riflessione: "Quanto fa $\cos(\arcsin(x))$?" Non lo so. Ma so che $\cos = \pm \sqrt{1-sin^2(x)}$. E' un passo avanti, dato che so che $\sin(\arcsin(x))=x$, cos\'i come $pippo(pippo^{-1}(x))=x$ per qualunque funzione $pippo$. C
+ un unico appunto da fare: nulla \'e gratis, e abbiamo dovuto pagare un prezzo. Il fatto \'e che abbiamo avuto in risposta $x$ applicando la funzione $seno$ e $arcoseno$, e per far ci\'o ci siam dovuti 'restringere' secondo tutti i restringimenti di dominio apportati dalle funzioni (nel nostro caso, solo la seconda, che restringe $\mathcal{D}=[-1;1]$). Anche il nostro barbatrucco di dire che $\cos(x)=\pm \sqrt{1-sin^2(x)}$ ha avuto un costo; ad esser pignoli dobbiamo dividere il dominio in due parti, a seconda che venga fuori il pi\'u o il meno. Metterei una mano sul fuoco (sperando di non fare scevolate) che alla fine venga ci\'o che ho detto io, ovvero  $\frac{1}{\sqrt{1-x^2}}$. Ma fate i conti per sicurezza.
+
+
+\section{Massimi e minimi}
+
+Sicuramente, l'aiuto maggiore che possono dare le derivate nello studio di funzione \'e il calcolo di massimi e minimi; poich\'e la derivata \'e la pendenza della retta tangente a $f$ nel punto, gli zeri di $f'$ sono proprio quei punti in cui la funzione smette di crescere o decrescere e si gode un attimo di pace; se passa da positiva a negativa, abbiamo un massimo (cresceva poi decresce), se da negativa diventa positiva abbiamo un minimo; se invece dopo lo zero il segno viene mantenuto \footnote{Vi segnalo l'interessante effetto matrioska: se la derivata intorno a zero passa da positiva a nulla e di nuovo a positiva ha un minimo in zero, e quindi si annulla la derivata seconda!!!} possiamo osservare un flesso, che ai nostri fini \'e solo un falso allarme.
+
+Per maggiori dettagli su derivate, massimi e minimi rimando allo studio di funzione (cap. \refpagref{massimiminimi}).
+
+
+
+
