@@ -27,3 +27,15 @@ Siccome non trovo l'espansione per vscode ho installato anche `TeXstudio`.
 estensioni belle:
 
 * LaTEX workshop: https://medium.com/@rcpassos/writing-latex-documents-in-visual-studio-code-with-latex-workshop-d9af6a6b2815 e anche https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop
+
+# LateX
+
+LATEX can organize, number, and index chapters and sections of document. There are up to 7 levels of depth for defining sections depending on the document class:
+
+-1	\part{part}
+0	\chapter{chapter}
+1	\section{section}
+2	\subsection{subsection}
+3	\subsubsection{subsubsection}
+4	\paragraph{paragraph}
+5	\subparagraph{subparagraph}

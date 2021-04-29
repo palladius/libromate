@@ -8,6 +8,9 @@
 Questo capitolo tenter\'a di spiegare il concetto di derivata che \'e tanto importante per tutta l'analisi matematica.
 Esso esige come prerequisito una buona conoscenza delle funzioni come concetto e delle funzioni notevoli.
 
+\prerequisitocovid{Per \em{calcolare} derivate, dovete conoscere il concetto di Limite 
+ed aver fatto ore di esercizi con essi. Per capire le derivate, questo non e' necessario.}
+
 \section{Cos' \egrave una derivata}
 
 La derivata \'e una specie di 'lastra' della vostra funzione: \'e un aiuto che vi consente di comprendere meglio la
@@ -304,9 +307,9 @@ intorno sinistro dell'esame).} (potete dedurle da voi; se avete 5 minuti, invest
 
 $D e^{f(x)} = f' \dot e^f$
 
-$D \log^{f(x)} = \frac{f'}{f} $
+$D \log{f(x)} = \frac{f'}{f} $
 
-$D \sin^{f(x)} = f' \dot \cos(f)$
+$D \sin{f(x)} = f' \dot \cos(f)$
 
 $D \sqrt{f(x)} = \frac{f'}{2\sqrt{f}}$
 
@@ -333,7 +336,8 @@ Questo non \'e affatto banale: derivate $f$ e la mettete al denominatore; ora av
 $D \arcsin(x)= \frac{1}{cos(y)} \bigg|_{y=arcsin(x)}=\frac{1}{\sqrt{1-sin^2(arcsin(x))}}=\frac{1}{\sqrt{1-x^2}}$
 
 Antipatico, vero? Eh gi\'a. Credo meriti un minuto di riflessione: "Quanto fa $\cos(\arcsin(x))$?" Non lo so. Ma so che $\cos = \pm \sqrt{1-sin^2(x)}$. E' un passo avanti, dato che so che $\sin(\arcsin(x))=x$, cos\'i come $pippo(pippo^{-1}(x))=x$ per qualunque funzione $pippo$. C
- un unico appunto da fare: nulla \'e gratis, e abbiamo dovuto pagare un prezzo. Il fatto \'e che abbiamo avuto in risposta $x$ applicando la funzione $seno$ e $arcoseno$, e per far ci\'o ci siam dovuti 'restringere' secondo tutti i restringimenti di dominio apportati dalle funzioni (nel nostro caso, solo la seconda, che restringe $\mathcal{D}=[-1;1]$). Anche il nostro barbatrucco di dire che $\cos(x)=\pm \sqrt{1-sin^2(x)}$ ha avuto un costo; ad esser pignoli dobbiamo dividere il dominio in due parti, a seconda che venga fuori il pi\'u o il meno. Metterei una mano sul fuoco (sperando di non fare scevolate) che alla fine venga ci\'o che ho detto io, ovvero  $\frac{1}{\sqrt{1-x^2}}$. Ma fate i conti per sicurezza.
+ un unico appunto da fare: nulla \'e gratis, e abbiamo dovuto pagare un prezzo. Il fatto \'e che abbiamo avuto in risposta $x$ applicando la funzione $seno$ e $arcoseno$, e per far ci\'o ci siam dovuti 'restringere' secondo tutti i restringimenti di dominio apportati dalle funzioni (nel nostro caso, solo la seconda, che restringe $\mathcal{D}=[-1;1]$). Anche il nostro barbatrucco di dire che $\cos(x)=\pm \sqrt{1-sin^2(x)}$ ha avuto un costo; ad esser pignoli dobbiamo dividere il dominio in due parti, a seconda che venga fuori il pi\'u o il meno.
+ Metterei una mano sul fuoco (sperando di non fare scevolate) che alla fine venga ci\'o che ho detto io, ovvero  $\frac{1}{\sqrt{1-x^2}}$. Ma fate i conti per sicurezza.
 
 
 \section{Massimi e minimi}
