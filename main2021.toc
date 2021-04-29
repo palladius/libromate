@@ -1,10 +1,10 @@
 \contentsline {chapter}{\numberline {0}Introduzione}{5}{chapter.0}%
-\contentsline {subsection}{\numberline {0.0.1}Per chi e' questo libro}{7}{subsection.0.0.1}%
+\contentsline {section}{\numberline {0.1}Per chi e' questo libro}{7}{section.0.1}%
 \contentsline {chapter}{\numberline {1}Notazione e definizioni}{9}{chapter.1}%
-\contentsline {subsection}{\numberline {1.0.1}simboli}{9}{subsection.1.0.1}%
-\contentsline {section}{\numberline {1.1}Come leggere una funzione}{10}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Una funzione facile: una retta}{10}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Una funzione piu' complessa: un generico polinomio}{11}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.1}simboli}{9}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Come leggere una funzione}{10}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Una funzione facile: una retta}{10}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Una funzione piu' complessa: un generico polinomio}{11}{subsection.1.2.2}%
 \contentsline {chapter}{\numberline {2}Numeri}{13}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Insiemi notevoli, in breve}{13}{section.2.1}%
 \contentsline {section}{\numberline {2.2}I numeri naturali}{14}{section.2.2}%
@@ -34,7 +34,7 @@
 \contentsline {subsection}{\numberline {3.4.4}Funzioni composte}{31}{subsection.3.4.4}%
 \contentsline {chapter}{\numberline {4}Trigonometria}{33}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Seni \& co.}{33}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Altro}{35}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Altre funzioni trigonometriche}{35}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Limiti}{37}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Limiti: un'introduzione}{37}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Limiti: definizione}{38}{section.5.2}%
