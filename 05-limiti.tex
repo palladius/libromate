@@ -37,8 +37,8 @@ matematica e nessuno mi ha mai spiegato cosa sia un numero piccolo". Anzitutto p
 
 La tentazione che mi viene è di mettere un cerotto a $f$ e creare una funzione simile (chiamiamola $\stackrel{g}{f}$ o $f_{rep}$)
 che viene 'riparata' nel punto di discontinuità (nel nostro caso la $f_{rep}$ varrebbe proprio $x+2$, esattamente come vi sareste
-aspettati).
-
+aspettati). Questo procedimento si applica per analisi di Fourier, dove di fatto la serie di Fourier di una funzione e' di fatto
+la funzione "cerottata", ma questo va oltre lo scopo di questo capitolo.
 
 \section{Limiti: definizione}
 
@@ -54,11 +54,11 @@ Diremo che:
 
 Lo so, lo so, suona assolutamente incomprensibile; vediamo di capirlo; anzitutto chiamiamo $P_{incriminato} \doteq (x_0;y_0)$.
 Detto ciò, potete asserire che il limite di $f$ in $x_0$ è $y_0$ con assoluta certezza solo se, comunque un antipatico (che
-chiameremo Andrea poiché ne condivide l'iniziale) fissi una $\epsilon$ 'piccola a piacere', voi siete in grado di trovare una
+chiameremo Tommaso poiché non si fida di noi) fissi una $\epsilon$ 'piccola a piacere', voi siete in grado di trovare una
 $\nu$ in funzione di $\epsilon$ tale che se la funzione dista in orizzantale da $P$ meno di quanto avete detto voi, essa dista
-pure in verticale meno di quel che vi ha detto Andrea. In altre parole, $\epsilon$ è il $\Delta Y$ massimo che Andrea accetterà,
+pure in verticale meno di quel che vi ha detto Tommaso. In altre parole, $\epsilon$ è il $\Delta Y$ massimo che Tommaso accetterà,
 e $\nu_\epsilon$ è il $\Delta X$ massimo, dettato da voi, intorno al quale la funzione si comporterà così bene da non uscire dai
-limiti (che brutta parola!) imposti da Andrea.
+limiti (che brutta parola!) imposti da Tommaso.
 
 Notiamo anzitutto una cosa: la definizione di limite non aiuta a {\em scoprire} quanto un limite valga, bensì a {\em verificare}
 se esso tenda effettivamente a un certo valore. Ovvero: se un uccellino vi dice che $\lim_{x \to 5} f(x)=7$, potete verificare
@@ -80,7 +80,7 @@ Vediamo se è vero applicando la definizione:
 |x-2|<\epsilon
 \end{equazione}
 
-Ora che abbiamo semplificato, è il turno di Andrea a fissare un $\epsilon$ (errore massimo voluto): diciamo che lui dica $0.1$
+Ora che abbiamo semplificato, è il turno di Tommaso a fissare un $\epsilon$ (errore massimo voluto): diciamo che lui dica $0.1$
 (un decimo). Non è gentile con noi, poteva dire $10$, ma dobbiamo abituarci a tali bassezze se vogliamo andare in giro orgogliosi
 a dire che il limite vale $4$! Ora noi dobbiamo trovare un $\nu_\epsilon$ che faccia valere la definizione. Ehi! Prendiamo la metà
 di quel che ha detto lui, $0.05$ (mezzo decimo): dobbiamo mostrare la parte tra parentesi graffe dell'eq. \ref{definizionelimite}:
@@ -91,10 +91,10 @@ di quel che ha detto lui, $0.05$ (mezzo decimo): dobbiamo mostrare la parte tra 
 \end{equation}
 
 Bè, chiamando $|x-2|$ col nome 'Pippo', è dannatamente ovvio che se Pippo è minore di $0.05$, allora Pippo sarà anche minore
-di $0.1$! C'è però un problema: io vorrei andare a casa prima di sera, e invece con questa tecnica devo aspettare che Andrea
+di $0.1$! C'è però un problema: io vorrei andare a casa prima di sera, e invece con questa tecnica devo aspettare che Tommaso
 si stanchi di sparare numeri sempre più piccoli! Lui potrebbe dire $0.01$, $0.0000001$, $\pi/10^{42}$, e io dovrei sempre andare
 avanti a dimostrare che so trovare un $\nu_\epsilon$ che freghi il suo $\epsilon$. Dobbiamo essere più furbi di così, dobbiamo
-inventarci una funzione (che con molta fantasia chiameremo $\nu(\epsilon)$ che ad ogni numero che ci dia Andrea associ un numero
+inventarci una funzione (che con molta fantasia chiameremo $\nu(\epsilon)$ che ad ogni numero che ci dia Tommaso associ un numero
 buono per fregarlo. Proviamo con $\nu(\epsilon) \doteq \frac{\epsilon}{2}$. Applichiamo la definizione:
 
 \begin{equazione}
@@ -104,7 +104,7 @@ buono per fregarlo. Proviamo con $\nu(\epsilon) \doteq \frac{\epsilon}{2}$. Appl
 
 Direi che funziona: se Pippo è minore della metà di $\epsilon$, a maggior ragione è minore di $\epsilon$ (attenti, questo vale
 solo perché $\epsilon>0$!!! Non sottovalutate i cavilli). D'ora in poi, possiamo mettere una segreteria telefonica, e ogni volta
-che Andrea telefona gli risponderà: "Quello che hai detto diviso due!", e così potremo anche uscire di casa a farci una birra, ogni tanto. 
+che Tommaso telefona gli risponderà: "Quello che hai detto diviso due!", e così potremo anche uscire di casa a farci una birra, ogni tanto. 
 
 Attenzione, questa volta l'uccellino ha suggerito giusto (che $f=4$), ma se ci avesse detto $5$?!? Proviamo, tanto per vedere.
 \begin{equazione}
@@ -114,18 +114,18 @@ Attenzione, questa volta l'uccellino ha suggerito giusto (che $f=4$), ma se ci a
 |x-3|<\epsilon
 \end{equazione}
 
-Adesso, Andrea - che si è fatto più gentile - ci dice: $\epsilon=10$. Noi rispondiamo, ad esempio (tiro a caso), $\nu=1$. Vediamo se funziona: 
+Adesso, Tommaso - che si è fatto più gentile - ci dice: $\epsilon=10$. Noi rispondiamo, ad esempio (tiro a caso), $\nu=1$. Vediamo se funziona: 
 \begin{equazione}
 |x-2|<1 \Longrightarrow  |\frac{x^2-4}{x-2}-5|=|x-3|<10 
 \end{equazione}
 Direi che ci siamo: la parte di sinistra dice che $x$ sta nell'intervallo $[1,3]$ e per qualunque di questi valori direi che $|x-3|$
-sta abbondantemente sotto a $10$. Ma aspettate a cantar vittoria: Andrea ci propone $\epsilon=0.1$. Noi prendiamo un $\nu$ piccolissimo,
+sta abbondantemente sotto a $10$. Ma aspettate a cantar vittoria: Tommaso ci propone $\epsilon=0.1$. Noi prendiamo un $\nu$ piccolissimo,
 diciamo $0.001$. Vediamo che succede:
 \begin{equazione}
 |x-2|<0.001 \Longrightarrow  |x-3|< 0.1
 \end{equazione}
 Questa volta, $x \in [1.999,2.001]$; è forse vero che per qualunque valore nel range dato $x$ dista da $3$ non più di $0.1$?!? Certamente
-no: la distanza va da $1.001$ a $0.999$ e in ogni caso è ben più grande del valore datoci di Andrea! Siamo stati fregati! L'uccellino non
+no: la distanza va da $1.001$ a $0.999$ e in ogni caso è ben più grande del valore datoci di Tommaso! Siamo stati fregati! L'uccellino non
 ci ha detto la verità!
 
 Dagli esempi visti, siamo stati in grado di dire che il limite $e' 4$ e che il limite $non e' 5$, ma non abbiamo imparato a fare due cose:
@@ -151,12 +151,26 @@ Una funzione $f$ si dice avere limite in un punto $x_0$ se (1) esistono i limiti
 
 
 \subsection{Limiti e infinito}
-Vi ricordo che coi limiti l'infinito ha senso di esistere come non mai... la deifnizione cambia
-TBDS
+
+Nell'ambito dei limiti, l'infinito ha senso di esistere come non mai... la definizione di limite cambia impercettibilmente perche'
+l'infinito non puo' essere compreso tra due valori $ \pm  \varepsilon $ e quindi ci limitiamo a prendere un valore sinistro (che invece
+che indefinitamente piccolo, diventa indefinitamente grande):
+
+
+\begin{equation}
+    \lim_{x \to \infty} f(x) = y_0
+\end{equation}
+
+{\em (che si legge 'limite per $x$ che tende a infinito di $f(x)$ è $y_0$')} se vale la seguente condizione:
+
+\begin{equation}\label{definizionelimitebis}
+    \forall \epsilon >0 \exists \nu_\epsilon : \{  x > \nu_\epsilon \Longrightarrow  |f(x)-y_0|<\epsilon \}
+\end{equation}
+
+Notate che nulla e' cambiato nel codominio, ma solo nel dominio: la $x$, invece di essere compresa tra due carabinieri,
+e' invece costretta a destra di un numero arbitrariamente grande.
 
 \section{Limiti notevoli}
-
-\section{Derivate notevoli}
 
 \begin{tabular}{|r|l|l|}
 \hline
@@ -165,8 +179,9 @@ $x_0$ & $f(x)$ & $\lim_{x \rightarrow x_0} f(x)$\\
 \hline
 $0$ 		& $x^n$ & $0$ \\
 $1$ 		& $x^n$ & $1$ \\
-$+\infty$ 	& $x^n$ & $0$ \\
+$+\infty$ 	& $x^n$ & $+\infty$\\
 \hline
+
 % $\frac{1}{x^n}$ & $\frac{-1}{x^{n+1}}^\dagger$ \\
 % $\sqrt{x}$ & $\frac{1}{2\sqrt{x}}^\dagger$ \\
 % $\sqrt[n]{x} (=x^{\frac{1}{n}})$ & $\frac{1}{n\sqrt[n]{x^{n-1}}}^\dagger$ \\
@@ -198,7 +213,7 @@ $+\infty$ 	& $x^n$ & $0$ \\
 
 \section{Limiti: uso pratico}
 
-Il modo migliore per affrontare i limiti è di {em non} sfruttare la definizione (che serve solo per le interrogazioni) ma adottare
+Il modo migliore per affrontare i limiti è di \emph{non} sfruttare la definizione (che serve solo per le interrogazioni) ma adottare
 i trucchettini che v'insegnerò, quasi fossero dogmi (mica li ho inventati io, sia chiaro!).
 
 Una volta trovati i limiti dei cosiddetti 'mattoncini', potrete usarli liberamente per trovare i limiti fi unzioni ben più complesse.
@@ -206,8 +221,16 @@ Una volta trovati i limiti dei cosiddetti 'mattoncini', potrete usarli liberamen
 Trattiamo tutti i limiti 'notevoli' come esercizi, e poi mettiamoli alla fine in una tabella riassuntiva (che deprecabilmente
 fotocopierete e lillipuzianamente metterete negli astucci, ...).
 
-\begin{esercizio}
-$\lim_{x \rightarrow 0} log(x)=$
+\begin{esercizio} Ecco a voi alcuni esercizi da risolvere:
+    
+    $\lim_{x \rightarrow 0} log(x)= $ ??
+
+
+    $\lim_{x \rightarrow 1} \frac{1}{x-1}= $ ??
+
+
+    $\lim_{x \rightarrow 0} \frac{sin(x)}{x}= $ ??
+
 \end{esercizio}
 
 
